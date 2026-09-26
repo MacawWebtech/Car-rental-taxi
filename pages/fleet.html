@@ -1,0 +1,957 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fleet — Sedans, SUVs, Luxury, Vans &amp; EVs | Kaarvan</title>
+<meta name="description" content="Browse 12 rental and chauffeur models. Filter by type, seats, price, fuel, transmission and rental type; sort by price or popularity.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://www.kaarvan.example/pages/fleet.html">
+<meta name="theme-color" content="#15171A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Crect width='34' height='34' rx='8' fill='%2315171A'/%3E%3Cpath d='M10 24 L17 9 L24 24' fill='none' stroke='%23D4A24C' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kaarvan">
+<meta property="og:title" content="Fleet — Sedans, SUVs, Luxury, Vans &amp; EVs | Kaarvan">
+<meta property="og:description" content="Browse 12 rental and chauffeur models. Filter by type, seats, price, fuel, transmission and rental type; sort by price or popularity.">
+<meta property="og:url" content="https://www.kaarvan.example/pages/fleet.html">
+<meta property="og:image" content="https://www.kaarvan.example/assets/images/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_IN">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fleet — Sedans, SUVs, Luxury, Vans &amp; EVs | Kaarvan">
+<meta name="twitter:description" content="Browse 12 rental and chauffeur models. Filter by type, seats, price, fuel, transmission and rental type; sort by price or popularity.">
+<meta name="twitter:image" content="https://www.kaarvan.example/assets/images/og-cover.jpg">
+
+<script>
+  /* Apply saved theme + language before first paint (no flash) */
+  (function () {
+    try {
+      var t = localStorage.getItem('mobility-theme');
+      if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-bs-theme', t);
+      var l = localStorage.getItem('mobility-lang');
+      if (l) { document.documentElement.lang = l; document.documentElement.dir = (l === 'ar' || l === 'he') ? 'rtl' : 'ltr'; }
+      var d = localStorage.getItem('mobility-dir');
+      if (d === 'rtl' || d === 'ltr') document.documentElement.dir = d;
+    } catch (e) {}
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/dark-mode.css">
+<link rel="stylesheet" href="../assets/css/rtl.css">
+<link rel="stylesheet" href="../assets/css/motion.css">
+<script>(function(d){if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){d.classList.add('motion-pending');setTimeout(function(){d.classList.remove('motion-pending');},2500);}})(document.documentElement);</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "LocalBusiness",
+    "AutoRental",
+    "TaxiService"
+  ],
+  "@id": "https://www.kaarvan.example/#business",
+  "name": "Kaarvan",
+  "description": "Premium taxi booking, airport transfers, chauffeur service and self-drive car rental across India.",
+  "url": "https://www.kaarvan.example/",
+  "logo": "https://www.kaarvan.example/assets/images/logo-dark.png",
+  "image": "https://www.kaarvan.example/assets/images/og-cover.jpg",
+  "telephone": "+91 44 4000 7000",
+  "email": "hello@kaarvan.example",
+  "priceRange": "₹₹",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4th Floor, Tower B, Olympia Tech Park, Guindy",
+    "addressLocality": "Chennai",
+    "addressRegion": "Tamil Nadu",
+    "postalCode": "600032",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 13.0108,
+    "longitude": 80.2206
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "00:00",
+      "closes": "23:59"
+    }
+  ],
+  "areaServed": [
+    "Chennai",
+    "Bengaluru",
+    "Hyderabad",
+    "Mumbai",
+    "Delhi",
+    "Pune",
+    "Kochi",
+    "Coimbatore"
+  ],
+  "sameAs": [
+    "https://www.instagram.com/",
+    "https://www.linkedin.com/",
+    "https://x.com/"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.kaarvan.example/pages/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Fleet",
+      "item": "https://www.kaarvan.example/pages/fleet.html"
+    }
+  ]
+}
+</script>
+</head>
+<body class="has-mobile-book">
+<div id="preloader" class="preloader" role="status" aria-live="polite">
+  <span class="preloader-mark" aria-hidden="true">
+    <svg viewBox="0 0 44 44"><circle class="preloader-ring" cx="22" cy="22" r="19"></circle></svg>
+  </span>
+  <span class="preloader-word">Kaarvan</span>
+  <span class="visually-hidden">Loading…</span>
+</div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="top-strip d-none d-md-block">
+  <div class="container-xl">
+    <div class="ts-contact">
+      <a href="tel:+914440007000"><i class="bi bi-telephone" aria-hidden="true"></i><span dir="ltr">+91 44 4000 7000</span></a>
+      <a href="mailto:hello@kaarvan.example"><i class="bi bi-envelope" aria-hidden="true"></i>hello@kaarvan.example</a>
+      <span class="d-none d-lg-inline-flex"><i class="bi bi-headset" aria-hidden="true"></i>Support open 24/7</span>
+    </div>
+    <div class="ts-tools">
+      <div class="dropdown">
+  <button class="ts-btn lang-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Change language">
+    <i class="bi bi-globe2" aria-hidden="true"></i><span data-lang-current>EN</span><i class="bi bi-chevron-down ts-caret" aria-hidden="true"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end"><li><a class="dropdown-item" href="#" data-lang="en" lang="en">English</a></li><li><a class="dropdown-item" href="#" data-lang="hi" lang="hi">हिन्दी</a></li><li><a class="dropdown-item" href="#" data-lang="ta" lang="ta">தமிழ்</a></li><li><a class="dropdown-item" href="#" data-lang="ar" lang="ar">العربية</a></li><li><a class="dropdown-item" href="#" data-lang="he" lang="he">עברית</a></li></ul>
+</div>
+      <span class="ts-sep" aria-hidden="true"></span>
+      <div class="dir-switch" role="group" aria-label="Layout direction">
+  <span class="dir-thumb" aria-hidden="true"></span>
+  <button type="button" data-dir="ltr" aria-pressed="true" title="Left to right">LTR</button>
+  <button type="button" data-dir="rtl" aria-pressed="false" title="Right to left">RTL</button>
+</div>
+    </div>
+  </div>
+</div>
+<header class="site-header">
+  <nav class="navbar navbar-expand-xl" aria-label="Primary">
+    <div class="container-xl">
+      <a class="brand" href="index.html" aria-label="Kaarvan home"><img class="brand-logo logo-for-light" src="../assets/images/logo-dark.png" alt="Kaarvan" width="364" height="120"><img class="brand-logo logo-for-dark" src="../assets/images/logo-light.png" alt="" width="364" height="120"></a>
+      <ul class="navbar-nav mx-auto d-none d-xl-flex">
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="index.html">Home — Mobility Services</a></li><li><a class="dropdown-item" href="home-2.html">Home — Chauffeur &amp; Corporate</a></li></ul></li><li class="nav-item"><a class="nav-link" href="services.html">Services</a></li><li class="nav-item"><a class="nav-link active" aria-current="page" href="fleet.html">Fleet</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Rentals</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="fleet.html#rental">Self-drive rental</a></li><li><a class="dropdown-item" href="vehicle-details.html">Featured vehicle</a></li><li><a class="dropdown-item" href="pricing.html#rental">Rental pricing</a></li><li><a class="dropdown-item" href="service-details.html">Long-term &amp; monthly</a></li></ul></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Taxi</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="booking.html">Book a taxi</a></li><li><a class="dropdown-item" href="service-details.html">Airport transfer</a></li><li><a class="dropdown-item" href="pricing.html#taxi">Taxi fares</a></li><li><a class="dropdown-item" href="user-dashboard.html">My trips</a></li></ul></li><li class="nav-item"><a class="nav-link" href="locations.html">Locations</a></li><li class="nav-item"><a class="nav-link" href="about.html">About</a></li><li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="header-tools ms-auto ms-xl-0">
+        <button class="icon-btn theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme">
+  <i class="bi bi-moon-stars" aria-hidden="true"></i><i class="bi bi-sun" aria-hidden="true"></i>
+</button>
+        <span class="tools-sep d-none d-lg-block" aria-hidden="true"></span>
+        <a class="btn btn-line btn-login d-none d-lg-inline-flex" href="login.html"><i class="bi bi-person-circle" aria-hidden="true"></i>Login</a>
+        <a class="icon-btn d-lg-none" href="login.html" aria-label="Login"><i class="bi bi-person" aria-hidden="true"></i></a>
+        <a class="btn btn-accent d-none d-sm-inline-flex" href="booking.html">Book a Ride</a>
+        <button class="icon-btn d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="Open menu">
+          <i class="bi bi-list fs-4" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="offcanvas offcanvas-end mobile-nav" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+  <div class="offcanvas-header">
+    <h2 class="visually-hidden" id="mobileNavLabel">Menu</h2>
+    <a class="brand" href="index.html" aria-label="Kaarvan home"><img class="brand-logo logo-for-light" src="../assets/images/logo-dark.png" alt="Kaarvan" width="364" height="120"><img class="brand-logo logo-for-dark" src="../assets/images/logo-light.png" alt="" width="364" height="120"></a>
+    <button type="button" class="icon-btn" data-bs-dismiss="offcanvas" aria-label="Close menu"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column">
+    <nav aria-label="Mobile"><a class="nav-link" href="index.html">Home<i class="bi bi-arrow-right-short" aria-hidden="true"></i></a><a class="nav-link" href="services.html">Services<i class="bi bi-arrow-right-short" aria-hidden="true"></i></a><a class="nav-link active" aria-current="page" href="fleet.html">Fleet<i class="bi bi-arrow-right-short" aria-hidden="true"></i></a><a class="nav-link" href="fleet.html#rental">Rentals<i class="bi bi-arrow-right-short" aria-hidden="true"></i></a><a class="nav-link" href="booking.html">Taxi<i class="bi bi-arrow-right-short" aria-hidden="true"></i></a><a class="nav-link" href="locations.html">Locations<i class="bi bi-arrow-right-short" aria-hidden="true"></i></a><a class="nav-link" href="about.html">About<i class="bi bi-arrow-right-short" aria-hidden="true"></i></a><a class="nav-link" href="contact.html">Contact<i class="bi bi-arrow-right-short" aria-hidden="true"></i></a></nav>
+    <div class="d-grid gap-2 mt-4">
+      <a class="btn btn-accent btn-lg" href="booking.html">Book a Ride</a>
+      <a class="btn btn-line btn-lg" href="login.html">Login</a>
+    </div>
+    <div class="mobile-prefs mt-auto pt-4">
+      <div class="d-flex justify-content-between align-items-center gap-3">
+        <div class="dropdown">
+  <button class="icon-btn lang-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Change language">
+    <i class="bi bi-globe2" aria-hidden="true"></i><span data-lang-current>EN</span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end"><li><a class="dropdown-item" href="#" data-lang="en" lang="en">English</a></li><li><a class="dropdown-item" href="#" data-lang="hi" lang="hi">हिन्दी</a></li><li><a class="dropdown-item" href="#" data-lang="ta" lang="ta">தமிழ்</a></li><li><a class="dropdown-item" href="#" data-lang="ar" lang="ar">العربية (RTL)</a></li><li><a class="dropdown-item" href="#" data-lang="he" lang="he">עברית (RTL)</a></li></ul>
+</div>
+        <div class="dir-switch" role="group" aria-label="Layout direction">
+  <span class="dir-thumb" aria-hidden="true"></span>
+  <button type="button" data-dir="ltr" aria-pressed="true" title="Left to right">LTR</button>
+  <button type="button" data-dir="rtl" aria-pressed="false" title="Right to left">RTL</button>
+</div>
+      </div>
+      <a href="tel:+914440007000" class="fw-bold text-decoration-none"><i class="bi bi-telephone me-2" aria-hidden="true"></i><span dir="ltr">+91 44 4000 7000</span></a>
+    </div>
+  </div>
+</div>
+<main id="main" tabindex="-1">
+<section class="section-sm section-alt">
+  <div class="container-xl">
+    <nav aria-label="Breadcrumb"><ol class="breadcrumb on-light"><li class="breadcrumb-item"><a href="index.html">Home</a></li><li class="breadcrumb-item active" aria-current="page">Fleet</li></ol></nav>
+    <div class="d-flex flex-wrap justify-content-between align-items-end gap-3">
+      <div><h1 class="mb-2" style="font-size:clamp(2.2rem,5vw,3.6rem)">Our fleet</h1><p class="lead mb-0">12 models, from efficient city sedans to flagship chauffeur cars.</p></div>
+    </div>
+  </div>
+</section>
+<section class="section pt-4">
+  <div class="container-xl">
+
+    <!-- VEHICLE CATEGORY FILTER -->
+    <form id="fleetFilters" aria-label="Fleet filters">
+
+      <div class="category-filter mb-4">
+        <div class="category-filter-head">
+          <div>
+            <span class="category-eyebrow">Browse our fleet</span>
+            <h2 class="category-title">Choose a vehicle type</h2>
+          </div>
+
+          <button class="btn btn-line filter-toggle" type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#filterCollapse"
+                  aria-expanded="false"
+                  aria-controls="filterCollapse">
+            <i class="bi bi-sliders me-2" aria-hidden="true"></i>
+            More Filters
+          </button>
+        </div>
+
+        <fieldset class="m-0">
+          <legend class="visually-hidden">Vehicle type</legend>
+
+          <div class="vehicle-category-list">
+
+            <input class="visually-hidden" type="checkbox" name="type"
+                   value="economy" id="ft-economy">
+            <label class="vehicle-category" for="ft-economy">
+              <i class="bi bi-car-front" aria-hidden="true"></i>
+              <span>Economy</span>
+            </label>
+
+            <input class="visually-hidden" type="checkbox" name="type"
+                   value="sedan" id="ft-sedan">
+            <label class="vehicle-category" for="ft-sedan">
+              <i class="bi bi-car-front-fill" aria-hidden="true"></i>
+              <span>Sedan</span>
+            </label>
+
+            <input class="visually-hidden" type="checkbox" name="type"
+                   value="suv" id="ft-suv">
+            <label class="vehicle-category" for="ft-suv">
+              <i class="bi bi-truck" aria-hidden="true"></i>
+              <span>SUV / MPV</span>
+            </label>
+
+            <input class="visually-hidden" type="checkbox" name="type"
+                   value="luxury" id="ft-luxury">
+            <label class="vehicle-category" for="ft-luxury">
+              <i class="bi bi-gem" aria-hidden="true"></i>
+              <span>Luxury</span>
+            </label>
+
+            <input class="visually-hidden" type="checkbox" name="type"
+                   value="van" id="ft-van">
+            <label class="vehicle-category" for="ft-van">
+              <i class="bi bi-bus-front" aria-hidden="true"></i>
+              <span>Van</span>
+            </label>
+
+            <input class="visually-hidden" type="checkbox" name="type"
+                   value="electric" id="ft-electric">
+            <label class="vehicle-category" for="ft-electric">
+              <i class="bi bi-lightning-charge" aria-hidden="true"></i>
+              <span>Electric</span>
+            </label>
+
+          </div>
+        </fieldset>
+      </div>
+
+      <!-- ADVANCED FILTERS -->
+      <div class="collapse mb-4" id="filterCollapse">
+        <div class="panel advanced-filter-panel">
+
+          <div class="row g-4">
+
+            <div class="col-md-6 col-lg-3">
+              <label class="form-label" for="fSeats">Seats</label>
+              <select class="form-select" id="fSeats" name="seats">
+                <option value="0">Any</option>
+                <option value="4">4+</option>
+                <option value="6">6+</option>
+                <option value="7">7+</option>
+              </select>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+              <label class="form-label d-flex justify-content-between"
+                     for="fPrice">
+                <span>Max price / day</span>
+                <output id="priceValue" for="fPrice">₹20,000</output>
+              </label>
+              <input class="form-range"
+                     type="range"
+                     id="fPrice"
+                     name="price"
+                     min="1500"
+                     max="20000"
+                     step="500"
+                     value="20000">
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+              <fieldset class="m-0">
+                <legend class="form-label">Fuel</legend>
+                <div class="chip-group">
+
+                  <input class="visually-hidden" type="checkbox"
+                         name="fuel" value="petrol" id="ff-petrol">
+                  <label class="chip" for="ff-petrol">Petrol</label>
+
+                  <input class="visually-hidden" type="checkbox"
+                         name="fuel" value="diesel" id="ff-diesel">
+                  <label class="chip" for="ff-diesel">Diesel</label>
+
+                  <input class="visually-hidden" type="checkbox"
+                         name="fuel" value="hybrid" id="ff-hybrid">
+                  <label class="chip" for="ff-hybrid">Hybrid</label>
+
+                  <input class="visually-hidden" type="checkbox"
+                         name="fuel" value="electric" id="ff-electric">
+                  <label class="chip" for="ff-electric">Electric</label>
+
+                  <input class="visually-hidden" type="checkbox"
+                         name="fuel" value="cng" id="ff-cng">
+                  <label class="chip" for="ff-cng">CNG</label>
+
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+              <fieldset class="m-0">
+                <legend class="form-label">Transmission</legend>
+                <div class="chip-group">
+
+                  <input class="visually-hidden" type="radio"
+                         name="transmission" value="any"
+                         id="tr-any" checked>
+                  <label class="chip" for="tr-any">Any</label>
+
+                  <input class="visually-hidden" type="radio"
+                         name="transmission" value="automatic"
+                         id="tr-a">
+                  <label class="chip" for="tr-a">Automatic</label>
+
+                  <input class="visually-hidden" type="radio"
+                         name="transmission" value="manual"
+                         id="tr-m">
+                  <label class="chip" for="tr-m">Manual</label>
+
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+              <label class="form-label" for="fRental">Rental type</label>
+              <select class="form-select" id="fRental" name="rental">
+                <option value="any">Any</option>
+                <option value="self">Self-drive</option>
+                <option value="chauffeur">Chauffeur-driven</option>
+                <option value="monthly">Monthly / long-term</option>
+              </select>
+            </div>
+
+            <div class="col-12">
+              <div class="filter-actions">
+                <button class="btn btn-line" type="reset">
+                  <i class="bi bi-arrow-counterclockwise me-2"
+                     aria-hidden="true"></i>
+                  Reset filters
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </form>
+
+    <!-- VEHICLE RESULTS HEADER -->
+    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+      <p class="m-0 fw-bold" aria-live="polite">
+        <span id="fleetCount">12</span> vehicles available
+      </p>
+
+      <div class="d-flex align-items-center gap-2">
+        <label for="fleetSort"
+               class="small fw-bold text-muted text-nowrap">
+          Sort by
+        </label>
+
+        <select class="form-select" id="fleetSort" style="min-width:210px">
+          <option value="recommended">Recommended</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="popular">Popular</option>
+        </select>
+      </div>
+    </div>
+        <div data-skeleton="650" aria-busy="true">
+          <div class="row g-4 skeleton-content" aria-hidden="true"><div class="col-md-6 col-xxl-4"><div class="sk-card" aria-hidden="true"><div class="skeleton sk-media"></div><div class="p-4"><div class="skeleton sk-title"></div><div class="skeleton sk-line w-50"></div><div class="skeleton sk-line mt-4"></div><div class="skeleton sk-line w-75"></div></div></div></div><div class="col-md-6 col-xxl-4"><div class="sk-card" aria-hidden="true"><div class="skeleton sk-media"></div><div class="p-4"><div class="skeleton sk-title"></div><div class="skeleton sk-line w-50"></div><div class="skeleton sk-line mt-4"></div><div class="skeleton sk-line w-75"></div></div></div></div><div class="col-md-6 col-xxl-4"><div class="sk-card" aria-hidden="true"><div class="skeleton sk-media"></div><div class="p-4"><div class="skeleton sk-title"></div><div class="skeleton sk-line w-50"></div><div class="skeleton sk-line mt-4"></div><div class="skeleton sk-line w-75"></div></div></div></div></div>
+          <div class="loaded-content" hidden>
+            <div class="row g-4" id="fleetGrid"><div class="col-md-6 col-xxl-4 fleet-item" data-vehicle data-type="sedan" data-fuel="hybrid" data-transmission="automatic" data-seats="4" data-price="3299" data-rental="self chauffeur" data-trips="1840" data-order="0"><article class="vehicle-card">
+  <div class="vehicle-media">
+    <img src="../assets/images/Toyota Camry Hybrid.jpg" srcset="" sizes="(min-width:1400px) 25vw, (min-width:768px) 40vw, 100vw" alt="Toyota Camry Hybrid, premium sedan" width="800" height="500" decoding="async" loading="lazy">
+    <span class="v-tag">Most booked</span>
+    <button class="v-save" type="button" aria-pressed="false" aria-label="Save Toyota Camry Hybrid"><i class="bi bi-heart" aria-hidden="true"></i></button>
+  </div>
+  <div class="vehicle-body">
+    <div class="d-flex justify-content-between align-items-start gap-2">
+      <div><h3><a href="vehicle-details.html">Toyota Camry Hybrid</a></h3><span class="v-cat">Premium Sedan</span></div>
+      <span class="v-rating"><i class="bi bi-star-fill" aria-hidden="true"></i>4.8<span class="visually-hidden"> out of 5</span></span>
+    </div>
+    <ul class="spec-list">
+      <li><i class="bi bi-people" aria-hidden="true"></i>4 seats</li>
+      <li><i class="bi bi-suitcase2" aria-hidden="true"></i>3 bags</li>
+      <li><i class="bi bi-gear-wide-connected" aria-hidden="true"></i>Automatic</li>
+      <li><i class="bi bi-fuel-pump" aria-hidden="true"></i>Hybrid</li>
+    </ul>
+    
+    <div class="v-foot">
+      <div class="v-price"><small>From</small><strong>₹3,299</strong><span>/day</span></div>
+      <a class="btn btn-ink btn-sm" href="booking.html?vehicle=sedan" aria-label="Book Toyota Camry Hybrid">Book Now</a>
+    </div>
+  </div>
+</article></div><div class="col-md-6 col-xxl-4 fleet-item" data-vehicle data-type="luxury" data-fuel="diesel" data-transmission="automatic" data-seats="4" data-price="8999" data-rental="chauffeur" data-trips="1210" data-order="1"><article class="vehicle-card">
+  <div class="vehicle-media">
+    <img src="../assets/images/chauffeur service.jpg" srcset="" sizes="(min-width:1400px) 25vw, (min-width:768px) 40vw, 100vw" alt="Mercedes-Benz E-Class, executive luxury" width="800" height="500" decoding="async" loading="lazy">
+    <span class="v-tag">Chauffeur only</span>
+    <button class="v-save" type="button" aria-pressed="false" aria-label="Save Mercedes-Benz E-Class"><i class="bi bi-heart" aria-hidden="true"></i></button>
+  </div>
+  <div class="vehicle-body">
+    <div class="d-flex justify-content-between align-items-start gap-2">
+      <div><h3><a href="vehicle-details.html">Mercedes-Benz E-Class</a></h3><span class="v-cat">Executive Luxury</span></div>
+      <span class="v-rating"><i class="bi bi-star-fill" aria-hidden="true"></i>4.9<span class="visually-hidden"> out of 5</span></span>
+    </div>
+    <ul class="spec-list">
+      <li><i class="bi bi-people" aria-hidden="true"></i>4 seats</li>
+      <li><i class="bi bi-suitcase2" aria-hidden="true"></i>3 bags</li>
+      <li><i class="bi bi-gear-wide-connected" aria-hidden="true"></i>Automatic</li>
+      <li><i class="bi bi-fuel-pump" aria-hidden="true"></i>Diesel</li>
+    </ul>
+    
+    <div class="v-foot">
+      <div class="v-price"><small>From</small><strong>₹8,999</strong><span>/day</span></div>
+      <a class="btn btn-ink btn-sm" href="booking.html?vehicle=luxury" aria-label="Book Mercedes-Benz E-Class">Book Now</a>
+    </div>
+  </div>
+</article></div><div class="col-md-6 col-xxl-4 fleet-item" data-vehicle data-type="luxury" data-fuel="petrol" data-transmission="automatic" data-seats="4" data-price="8499" data-rental="self chauffeur" data-trips="980" data-order="2"><article class="vehicle-card">
+  <div class="vehicle-media">
+    <img src="../assets/images/BMW 5 Series.jpg" srcset="" sizes="(min-width:1400px) 25vw, (min-width:768px) 40vw, 100vw" alt="BMW 5 Series, executive luxury" width="800" height="500" decoding="async" loading="lazy">
+    
+    <button class="v-save" type="button" aria-pressed="false" aria-label="Save BMW 5 Series"><i class="bi bi-heart" aria-hidden="true"></i></button>
+  </div>
+  <div class="vehicle-body">
+    <div class="d-flex justify-content-between align-items-start gap-2">
+      <div><h3><a href="vehicle-details.html">BMW 5 Series</a></h3><span class="v-cat">Executive Luxury</span></div>
+      <span class="v-rating"><i class="bi bi-star-fill" aria-hidden="true"></i>4.9<span class="visually-hidden"> out of 5</span></span>
+    </div>
+    <ul class="spec-list">
+      <li><i class="bi bi-people" aria-hidden="true"></i>4 seats</li>
+      <li><i class="bi bi-suitcase2" aria-hidden="true"></i>3 bags</li>
+      <li><i class="bi bi-gear-wide-connected" aria-hidden="true"></i>Automatic</li>
+      <li><i class="bi bi-fuel-pump" aria-hidden="true"></i>Petrol</li>
+    </ul>
+    
+    <div class="v-foot">
+      <div class="v-price"><small>From</small><strong>₹8,499</strong><span>/day</span></div>
+      <a class="btn btn-ink btn-sm" href="booking.html?vehicle=luxury" aria-label="Book BMW 5 Series">Book Now</a>
+    </div>
+  </div>
+</article></div><div class="col-md-6 col-xxl-4 fleet-item" data-vehicle data-type="suv" data-fuel="hybrid" data-transmission="automatic" data-seats="7" data-price="3999" data-rental="self chauffeur monthly" data-trips="2230" data-order="3"><article class="vehicle-card">
+  <div class="vehicle-media">
+    <img src="../assets/images/Toyota Camry Hybrid.jpg" srcset="" sizes="(min-width:1400px) 25vw, (min-width:768px) 40vw, 100vw" alt="Toyota Innova Hycross, family mpv" width="800" height="500" decoding="async" loading="lazy">
+    <span class="v-tag">Family favourite</span>
+    <button class="v-save" type="button" aria-pressed="false" aria-label="Save Toyota Innova Hycross"><i class="bi bi-heart" aria-hidden="true"></i></button>
+  </div>
+  <div class="vehicle-body">
+    <div class="d-flex justify-content-between align-items-start gap-2">
+      <div><h3><a href="vehicle-details.html">Toyota Innova Hycross</a></h3><span class="v-cat">Family MPV</span></div>
+      <span class="v-rating"><i class="bi bi-star-fill" aria-hidden="true"></i>4.7<span class="visually-hidden"> out of 5</span></span>
+    </div>
+    <ul class="spec-list">
+      <li><i class="bi bi-people" aria-hidden="true"></i>7 seats</li>
+      <li><i class="bi bi-suitcase2" aria-hidden="true"></i>4 bags</li>
+      <li><i class="bi bi-gear-wide-connected" aria-hidden="true"></i>Automatic</li>
+      <li><i class="bi bi-fuel-pump" aria-hidden="true"></i>Hybrid</li>
+    </ul>
+    
+    <div class="v-foot">
+      <div class="v-price"><small>From</small><strong>₹3,999</strong><span>/day</span></div>
+      <a class="btn btn-ink btn-sm" href="booking.html?vehicle=suv" aria-label="Book Toyota Innova Hycross">Book Now</a>
+    </div>
+  </div>
+</article></div><div class="col-md-6 col-xxl-4 fleet-item" data-vehicle data-type="van" data-fuel="diesel" data-transmission="automatic" data-seats="7" data-price="5499" data-rental="chauffeur" data-trips="640" data-order="4"><article class="vehicle-card">
+  <div class="vehicle-media">
+    <img src="../assets/images/Kia Carnival.jpg" srcset="" sizes="(min-width:1400px) 25vw, (min-width:768px) 40vw, 100vw" alt="Kia Carnival, premium van" width="800" height="500" decoding="async" loading="lazy">
+    
+    <button class="v-save" type="button" aria-pressed="false" aria-label="Save Kia Carnival"><i class="bi bi-heart" aria-hidden="true"></i></button>
+  </div>
+  <div class="vehicle-body">
+    <div class="d-flex justify-content-between align-items-start gap-2">
+      <div><h3><a href="vehicle-details.html">Kia Carnival</a></h3><span class="v-cat">Premium Van</span></div>
+      <span class="v-rating"><i class="bi bi-star-fill" aria-hidden="true"></i>4.8<span class="visually-hidden"> out of 5</span></span>
+    </div>
+    <ul class="spec-list">
+      <li><i class="bi bi-people" aria-hidden="true"></i>7 seats</li>
+      <li><i class="bi bi-suitcase2" aria-hidden="true"></i>5 bags</li>
+      <li><i class="bi bi-gear-wide-connected" aria-hidden="true"></i>Automatic</li>
+      <li><i class="bi bi-fuel-pump" aria-hidden="true"></i>Diesel</li>
+    </ul>
+    
+    <div class="v-foot">
+      <div class="v-price"><small>From</small><strong>₹5,499</strong><span>/day</span></div>
+      <a class="btn btn-ink btn-sm" href="booking.html?vehicle=van" aria-label="Book Kia Carnival">Book Now</a>
+    </div>
+  </div>
+</article></div><div class="col-md-6 col-xxl-4 fleet-item" data-vehicle data-type="van" data-fuel="diesel" data-transmission="automatic" data-seats="6" data-price="10999" data-rental="chauffeur" data-trips="410" data-order="5"><article class="vehicle-card">
+  <div class="vehicle-media">
+    <img src="../assets/images/Mercedes-Benz E-Class.jpg" srcset="" sizes="(min-width:1400px) 25vw, (min-width:768px) 40vw, 100vw" alt="Mercedes-Benz V-Class, luxury van" width="800" height="500" decoding="async" loading="lazy">
+    <span class="v-tag">Group travel</span>
+    <button class="v-save" type="button" aria-pressed="false" aria-label="Save Mercedes-Benz V-Class"><i class="bi bi-heart" aria-hidden="true"></i></button>
+  </div>
+  <div class="vehicle-body">
+    <div class="d-flex justify-content-between align-items-start gap-2">
+      <div><h3><a href="vehicle-details.html">Mercedes-Benz V-Class</a></h3><span class="v-cat">Luxury Van</span></div>
+      <span class="v-rating"><i class="bi bi-star-fill" aria-hidden="true"></i>4.9<span class="visually-hidden"> out of 5</span></span>
+    </div>
+    <ul class="spec-list">
+      <li><i class="bi bi-people" aria-hidden="true"></i>6 seats</li>
+      <li><i class="bi bi-suitcase2" aria-hidden="true"></i>6 bags</li>
+      <li><i class="bi bi-gear-wide-connected" aria-hidden="true"></i>Automatic</li>
+      <li><i class="bi bi-fuel-pump" aria-hidden="true"></i>Diesel</li>
+    </ul>
+    
+    <div class="v-foot">
+      <div class="v-price"><small>From</small><strong>₹10,999</strong><span>/day</span></div>
+      <a class="btn btn-ink btn-sm" href="booking.html?vehicle=van" aria-label="Book Mercedes-Benz V-Class">Book Now</a>
+    </div>
+  </div>
+</article></div><div class="col-md-6 col-xxl-4 fleet-item" data-vehicle data-type="electric" data-fuel="electric" data-transmission="automatic" data-seats="4" data-price="5999" data-rental="self chauffeur" data-trips="720" data-order="6"><article class="vehicle-card">
+  <div class="vehicle-media">
+    <img src="../assets/images/Tesla Model 3.jpg" srcset="" sizes="(min-width:1400px) 25vw, (min-width:768px) 40vw, 100vw" alt="Tesla Model 3, electric sedan" width="800" height="500" decoding="async" loading="lazy">
+    <span class="v-tag">Zero emission</span>
+    <button class="v-save" type="button" aria-pressed="false" aria-label="Save Tesla Model 3"><i class="bi bi-heart" aria-hidden="true"></i></button>
+  </div>
+  <div class="vehicle-body">
+    <div class="d-flex justify-content-between align-items-start gap-2">
+      <div><h3><a href="vehicle-details.html">Tesla Model 3</a></h3><span class="v-cat">Electric Sedan</span></div>
+      <span class="v-rating"><i class="bi bi-star-fill" aria-hidden="true"></i>4.8<span class="visually-hidden"> out of 5</span></span>
+    </div>
+    <ul class="spec-list">
+      <li><i class="bi bi-people" aria-hidden="true"></i>4 seats</li>
+      <li><i class="bi bi-suitcase2" aria-hidden="true"></i>2 bags</li>
+      <li><i class="bi bi-gear-wide-connected" aria-hidden="true"></i>Automatic</li>
+      <li><i class="bi bi-lightning-charge" aria-hidden="true"></i>Electric</li>
+    </ul>
+    
+    <div class="v-foot">
+      <div class="v-price"><small>From</small><strong>₹5,999</strong><span>/day</span></div>
+      <a class="btn btn-ink btn-sm" href="booking.html?vehicle=electric" aria-label="Book Tesla Model 3">Book Now</a>
+    </div>
+  </div>
+</article></div><div class="col-md-6 col-xxl-4 fleet-item" data-vehicle data-type="suv" data-fuel="diesel" data-transmission="automatic" data-seats="4" data-price="11999" data-rental="self chauffeur" data-trips="350" data-order="7"><article class="vehicle-card">
+  <div class="vehicle-media">
+    <img src="../assets/images/premium suv rentals.jpg" srcset="" sizes="(min-width:1400px) 25vw, (min-width:768px) 40vw, 100vw" alt="Range Rover Velar, luxury suv" width="800" height="500" decoding="async" loading="lazy">
+    
+    <button class="v-save" type="button" aria-pressed="false" aria-label="Save Range Rover Velar"><i class="bi bi-heart" aria-hidden="true"></i></button>
+  </div>
+  <div class="vehicle-body">
+    <div class="d-flex justify-content-between align-items-start gap-2">
+      <div><h3><a href="vehicle-details.html">Range Rover Velar</a></h3><span class="v-cat">Luxury SUV</span></div>
+      <span class="v-rating"><i class="bi bi-star-fill" aria-hidden="true"></i>4.9<span class="visually-hidden"> out of 5</span></span>
+    </div>
+    <ul class="spec-list">
+      <li><i class="bi bi-people" aria-hidden="true"></i>4 seats</li>
+      <li><i class="bi bi-suitcase2" aria-hidden="true"></i>4 bags</li>
+      <li><i class="bi bi-gear-wide-connected" aria-hidden="true"></i>Automatic</li>
+      <li><i class="bi bi-fuel-pump" aria-hidden="true"></i>Diesel</li>
+    </ul>
+    
+    <div class="v-foot">
+      <div class="v-price"><small>From</small><strong>₹11,999</strong><span>/day</span></div>
+      <a class="btn btn-ink btn-sm" href="booking.html?vehicle=suv" aria-label="Book Range Rover Velar">Book Now</a>
+    </div>
+  </div>
+</article></div><div class="col-md-6 col-xxl-4 fleet-item" data-vehicle data-type="economy" data-fuel="cng" data-transmission="manual" data-seats="4" data-price="1799" data-rental="self chauffeur monthly" data-trips="3120" data-order="8"><article class="vehicle-card">
+  <div class="vehicle-media">
+    <img src="../assets/images/Maruti Suzuki Dzire.jpg" srcset="" sizes="(min-width:1400px) 25vw, (min-width:768px) 40vw, 100vw" alt="Maruti Suzuki Dzire, economy sedan" width="800" height="500" decoding="async" loading="lazy">
+    <span class="v-tag">Best value</span>
+    <button class="v-save" type="button" aria-pressed="false" aria-label="Save Maruti Suzuki Dzire"><i class="bi bi-heart" aria-hidden="true"></i></button>
+  </div>
+  <div class="vehicle-body">
+    <div class="d-flex justify-content-between align-items-start gap-2">
+      <div><h3><a href="vehicle-details.html">Maruti Suzuki Dzire</a></h3><span class="v-cat">Economy Sedan</span></div>
+      <span class="v-rating"><i class="bi bi-star-fill" aria-hidden="true"></i>4.6<span class="visually-hidden"> out of 5</span></span>
+    </div>
+    <ul class="spec-list">
+      <li><i class="bi bi-people" aria-hidden="true"></i>4 seats</li>
+      <li><i class="bi bi-suitcase2" aria-hidden="true"></i>2 bags</li>
+      <li><i class="bi bi-gear-wide-connected" aria-hidden="true"></i>Manual</li>
+      <li><i class="bi bi-fuel-pump" aria-hidden="true"></i>CNG</li>
+    </ul>
+    
+    <div class="v-foot">
+      <div class="v-price"><small>From</small><strong>₹1,799</strong><span>/day</span></div>
+      <a class="btn btn-ink btn-sm" href="booking.html?vehicle=economy" aria-label="Book Maruti Suzuki Dzire">Book Now</a>
+    </div>
+  </div>
+</article></div><div class="col-md-6 col-xxl-4 fleet-item" data-vehicle data-type="electric" data-fuel="electric" data-transmission="automatic" data-seats="4" data-price="2999" data-rental="self monthly" data-trips="880" data-order="9"><article class="vehicle-card">
+  <div class="vehicle-media">
+    <img src="../assets/images/Tata Nexon EV.jpg" srcset="" sizes="(min-width:1400px) 25vw, (min-width:768px) 40vw, 100vw" alt="Tata Nexon EV, electric suv" width="800" height="500" decoding="async" loading="lazy">
+    
+    <button class="v-save" type="button" aria-pressed="false" aria-label="Save Tata Nexon EV"><i class="bi bi-heart" aria-hidden="true"></i></button>
+  </div>
+  <div class="vehicle-body">
+    <div class="d-flex justify-content-between align-items-start gap-2">
+      <div><h3><a href="vehicle-details.html">Tata Nexon EV</a></h3><span class="v-cat">Electric SUV</span></div>
+      <span class="v-rating"><i class="bi bi-star-fill" aria-hidden="true"></i>4.6<span class="visually-hidden"> out of 5</span></span>
+    </div>
+    <ul class="spec-list">
+      <li><i class="bi bi-people" aria-hidden="true"></i>4 seats</li>
+      <li><i class="bi bi-suitcase2" aria-hidden="true"></i>2 bags</li>
+      <li><i class="bi bi-gear-wide-connected" aria-hidden="true"></i>Automatic</li>
+      <li><i class="bi bi-lightning-charge" aria-hidden="true"></i>Electric</li>
+    </ul>
+    
+    <div class="v-foot">
+      <div class="v-price"><small>From</small><strong>₹2,999</strong><span>/day</span></div>
+      <a class="btn btn-ink btn-sm" href="booking.html?vehicle=electric" aria-label="Book Tata Nexon EV">Book Now</a>
+    </div>
+  </div>
+</article></div><div class="col-md-6 col-xxl-4 fleet-item" data-vehicle data-type="suv" data-fuel="diesel" data-transmission="automatic" data-seats="7" data-price="5499" data-rental="self chauffeur" data-trips="1020" data-order="10"><article class="vehicle-card">
+  <div class="vehicle-media">
+    <img src="../assets/images/Toyota Fortuner.jpg" srcset="" sizes="(min-width:1400px) 25vw, (min-width:768px) 40vw, 100vw" alt="Toyota Fortuner, full-size suv" width="800" height="500" decoding="async" loading="lazy">
+    <span class="v-tag">Outstation ready</span>
+    <button class="v-save" type="button" aria-pressed="false" aria-label="Save Toyota Fortuner"><i class="bi bi-heart" aria-hidden="true"></i></button>
+  </div>
+  <div class="vehicle-body">
+    <div class="d-flex justify-content-between align-items-start gap-2">
+      <div><h3><a href="vehicle-details.html">Toyota Fortuner</a></h3><span class="v-cat">Full-size SUV</span></div>
+      <span class="v-rating"><i class="bi bi-star-fill" aria-hidden="true"></i>4.7<span class="visually-hidden"> out of 5</span></span>
+    </div>
+    <ul class="spec-list">
+      <li><i class="bi bi-people" aria-hidden="true"></i>7 seats</li>
+      <li><i class="bi bi-suitcase2" aria-hidden="true"></i>4 bags</li>
+      <li><i class="bi bi-gear-wide-connected" aria-hidden="true"></i>Automatic</li>
+      <li><i class="bi bi-fuel-pump" aria-hidden="true"></i>Diesel</li>
+    </ul>
+    
+    <div class="v-foot">
+      <div class="v-price"><small>From</small><strong>₹5,499</strong><span>/day</span></div>
+      <a class="btn btn-ink btn-sm" href="booking.html?vehicle=suv" aria-label="Book Toyota Fortuner">Book Now</a>
+    </div>
+  </div>
+</article></div><div class="col-md-6 col-xxl-4 fleet-item" data-vehicle data-type="luxury" data-fuel="petrol" data-transmission="automatic" data-seats="4" data-price="18999" data-rental="chauffeur" data-trips="160" data-order="11"><article class="vehicle-card">
+  <div class="vehicle-media">
+    <img src="../assets/images/Mercedes-Benz.jpg" srcset="" sizes="(min-width:1400px) 25vw, (min-width:768px) 40vw, 100vw" alt="Mercedes-Benz S-Class, flagship luxury" width="800" height="500" decoding="async" loading="lazy">
+    <span class="v-tag">Flagship</span>
+    <button class="v-save" type="button" aria-pressed="false" aria-label="Save Mercedes-Benz S-Class"><i class="bi bi-heart" aria-hidden="true"></i></button>
+  </div>
+  <div class="vehicle-body">
+    <div class="d-flex justify-content-between align-items-start gap-2">
+      <div><h3><a href="vehicle-details.html">Mercedes-Benz S-Class</a></h3><span class="v-cat">Flagship Luxury</span></div>
+      <span class="v-rating"><i class="bi bi-star-fill" aria-hidden="true"></i>5.0<span class="visually-hidden"> out of 5</span></span>
+    </div>
+    <ul class="spec-list">
+      <li><i class="bi bi-people" aria-hidden="true"></i>4 seats</li>
+      <li><i class="bi bi-suitcase2" aria-hidden="true"></i>3 bags</li>
+      <li><i class="bi bi-gear-wide-connected" aria-hidden="true"></i>Automatic</li>
+      <li><i class="bi bi-fuel-pump" aria-hidden="true"></i>Petrol</li>
+    </ul>
+    
+    <div class="v-foot">
+      <div class="v-price"><small>From</small><strong>₹18,999</strong><span>/day</span></div>
+      <a class="btn btn-ink btn-sm" href="booking.html?vehicle=luxury" aria-label="Book Mercedes-Benz S-Class">Book Now</a>
+    </div>
+  </div>
+</article></div></div>
+            <div id="fleetEmpty" class="k-alert info mt-4" hidden><i class="bi bi-search" aria-hidden="true"></i><div><strong>No vehicles match those filters.</strong><br>Try widening the price range or clearing a filter.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* =========================================================
+   TOP VEHICLE CATEGORY FILTER
+   ========================================================= */
+
+.category-filter {
+  width: 100%;
+  padding: 24px;
+  background: var(--surface, #fff);
+  border: 1px solid var(--border, #dedede);
+  border-radius: 18px;
+}
+
+.category-filter-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 18px;
+}
+
+.category-eyebrow {
+  display: block;
+  margin-bottom: 4px;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted, #737373);
+}
+
+.category-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.vehicle-category-list {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.vehicle-category {
+  min-height: 76px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 1px solid var(--border, #dedede);
+  border-radius: 12px;
+  background: var(--surface, #fff);
+  color: var(--ink, #171717);
+  cursor: pointer;
+  font-size: .92rem;
+  font-weight: 600;
+  text-align: center;
+  transition: transform .2s ease, border-color .2s ease,
+              background-color .2s ease, color .2s ease,
+              box-shadow .2s ease;
+}
+
+.vehicle-category i {
+  flex: 0 0 auto;
+  font-size: 1.25rem;
+}
+
+.vehicle-category:hover {
+  transform: translateY(-2px);
+  border-color: var(--ink, #171717);
+}
+
+input[type="checkbox"]:checked + .vehicle-category {
+  background: var(--ink, #171717);
+  color: #fff;
+  border-color: var(--ink, #171717);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+}
+
+.vehicle-category:focus-visible {
+  outline: 3px solid rgba(13, 110, 253, .25);
+  outline-offset: 2px;
+}
+
+.advanced-filter-panel {
+  padding: 24px;
+  border-radius: 18px;
+}
+
+.filter-actions {
+  padding-top: 4px;
+  border-top: 1px solid var(--border, #dedede);
+}
+
+#fleetGrid {
+  width: 100%;
+}
+
+/* Keep three vehicle cards on large desktop screens */
+@media (min-width: 1400px) {
+  #fleetGrid > .fleet-item {
+    flex: 0 0 auto;
+    width: 33.333333%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1199.98px) {
+  .vehicle-category-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+  .category-filter {
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  .category-filter-head {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+
+  .filter-toggle {
+    width: 100%;
+  }
+
+  .vehicle-category-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+  }
+
+  .vehicle-category {
+    min-height: 62px;
+    padding: 9px 7px;
+    font-size: .82rem;
+  }
+
+  .vehicle-category i {
+    font-size: 1.05rem;
+  }
+
+  .advanced-filter-panel {
+    padding: 18px;
+  }
+
+  #fleetSort {
+    min-width: 0 !important;
+    width: 100%;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 420px) {
+  .vehicle-category {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .vehicle-category i {
+    font-size: 1.15rem;
+  }
+}
+</style></main>
+<footer class="site-footer">
+  <div class="container-xl">
+    <div class="footer-cta">
+      <h2>Wherever you're headed, we'll get you there.</h2>
+      <div>
+        <p class="mb-3">Route deals, new cities and travel notes. One email a month.</p>
+        <!-- Newsletter: Mailchimp / ConvertKit — set action to your provider's form endpoint -->
+        <form class="newsletter" action="https://example.us21.list-manage.com/subscribe/post" method="post" data-newsletter>
+          <label for="nl-email" class="visually-hidden">Email address</label>
+          <input id="nl-email" type="email" name="EMAIL" class="form-control" placeholder="you@company.com" autocomplete="email" required>
+          <button class="btn btn-accent" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Kaarvan home"><img class="brand-logo" src="../assets/images/logo-light.png" alt="Kaarvan" width="364" height="120"></a>
+        <p class="mt-3">Premium rides, flexible rentals and professional chauffeurs across eight Indian cities.</p>
+        <ul class="contact-lines mt-4">
+          <li><i class="bi bi-telephone" aria-hidden="true"></i><a href="tel:+914440007000" dir="ltr">+91 44 4000 7000</a></li>
+          <li><i class="bi bi-envelope" aria-hidden="true"></i><a href="mailto:hello@kaarvan.example">hello@kaarvan.example</a></li>
+          <li><i class="bi bi-geo-alt" aria-hidden="true"></i><span>4th Floor, Tower B, Olympia Tech Park, Guindy, Chennai 600032</span></li>
+        </ul>
+        <div class="social mt-4">
+          <a href="https://www.instagram.com/" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+          <a href="https://www.linkedin.com/" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+          <a href="https://x.com/" aria-label="X (Twitter)"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
+          <a href="https://www.youtube.com/" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h2>Company</h2>
+        <ul><li><a href="about.html">About</a></li><li><a href="about.html#careers">Careers</a></li><li><a href="contact.html">Contact</a></li><li><a href="locations.html">Locations</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h2>Services</h2>
+        <ul><li><a href="booking.html">Taxi</a></li><li><a href="fleet.html">Car Rental</a></li><li><a href="service-details.html">Airport Transfer</a></li><li><a href="home-2.html">Chauffeur</a></li><li><a href="home-2.html#corporate">Corporate Travel</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h2>Resources</h2>
+        <ul><li><a href="service-details.html#faq">FAQ</a></li><li><a href="contact.html#help">Help Center</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h2>Legal</h2>
+        <ul><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li><li><a href="pricing.html#cancellation">Cancellation Policy</a></li><li><a href="coming-soon.html">Status</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year>2026</span> Kaarvan Mobility Pvt. Ltd. All rights reserved.</span>
+      <span>GSTIN 33ABCDE1234F1Z5 · Fares shown include 5% GST</span>
+    </div>
+  </div>
+</footer>
+<div class="mobile-book" role="region" aria-label="Quick booking">
+  <a class="btn btn-accent" href="booking.html"><i class="bi bi-lightning-charge-fill me-1" aria-hidden="true"></i>Book a Ride</a>
+  <a class="btn btn-ghost-light" href="tel:+914440007000" aria-label="Call Kaarvan"><i class="bi bi-telephone" aria-hidden="true"></i></a>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+<script src="../assets/js/motion.js" defer></script>
+</body>
+</html>

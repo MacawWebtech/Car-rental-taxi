@@ -1,0 +1,54 @@
+/* ==========================================================================
+   KAARVAN — rtl.css (Arabic / Hebrew)
+   Layout already uses logical properties (inset-inline, padding-inline,
+   margin-inline, border-inline). This file covers what they cannot:
+   directional icons, transforms, and Bootstrap's physical utilities.
+   Activated by <html dir="rtl"> via the language selector (main.js).
+   ========================================================================== */
+[dir="rtl"] body { font-family: "Noto Sans Arabic", "Noto Sans Hebrew", var(--font-ui); }
+[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] .display-hero, [dir="rtl"] .eyebrow { letter-spacing: 0; }
+
+/* Directional icons */
+[dir="rtl"] .bi-arrow-right, [dir="rtl"] .bi-arrow-left, [dir="rtl"] .bi-arrow-up-right,
+[dir="rtl"] .bi-chevron-right, [dir="rtl"] .bi-chevron-left, [dir="rtl"] .bi-box-arrow-right,
+[dir="rtl"] .bi-send { display: inline-block; transform: scaleX(-1); }
+[dir="rtl"] .btn:hover .bi-arrow-right, [dir="rtl"] .link-arrow:hover i { transform: scaleX(-1) translateX(4px); }
+[dir="rtl"] .btn:hover .bi-arrow-up-right, [dir="rtl"] .service-card:hover .card-arrow { transform: scaleX(-1) translate(3px, -3px); }
+[dir="rtl"] .site-header .nav-link::after { transform-origin: right; }
+
+/* Bootstrap physical utilities used in the template */
+[dir="rtl"] .ms-auto { margin-left: 0 !important; margin-right: auto !important; }
+[dir="rtl"] .me-auto { margin-right: 0 !important; margin-left: auto !important; }
+[dir="rtl"] .ms-1 { margin-left: 0 !important; margin-right: .25rem !important; }
+[dir="rtl"] .ms-2 { margin-left: 0 !important; margin-right: .5rem !important; }
+[dir="rtl"] .me-1 { margin-right: 0 !important; margin-left: .25rem !important; }
+[dir="rtl"] .me-2 { margin-right: 0 !important; margin-left: .5rem !important; }
+[dir="rtl"] .text-start { text-align: right !important; }
+[dir="rtl"] .text-end { text-align: left !important; }
+[dir="rtl"] .form-select { background-position: left .75rem center; padding-left: 2.25rem; }
+[dir="rtl"] .form-check { padding-left: 0; padding-right: 1.5em; }
+[dir="rtl"] .form-check .form-check-input { float: right; margin-left: 0; margin-right: -1.5em; }
+[dir="rtl"] .form-switch { padding-right: 2.9em; }
+[dir="rtl"] .form-switch .form-check-input { margin-right: -2.9em; }
+[dir="rtl"] .accordion-button::after { margin-left: 0; margin-right: auto; }
+[dir="rtl"] .breadcrumb-item + .breadcrumb-item { padding-left: 0; padding-right: var(--bs-breadcrumb-item-padding-x); }
+[dir="rtl"] .breadcrumb-item + .breadcrumb-item::before { float: right; padding-right: 0; padding-left: var(--bs-breadcrumb-item-padding-x); }
+[dir="rtl"] .modal-header .btn-close { margin-right: auto; margin-left: calc(-.5 * var(--bs-modal-header-padding-x)); }
+
+/* Off-canvas: .offcanvas-end slides from the left in RTL */
+[dir="rtl"] .offcanvas-end { right: auto; left: 0; border-left: 0; border-right: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color); transform: translateX(-100%); }
+[dir="rtl"] .offcanvas-end.show:not(.hiding), [dir="rtl"] .offcanvas-end.showing { transform: none; }
+
+/* Dashboard sidebar slides in from the right */
+@media (max-width: 1199.98px) {
+  [dir="rtl"] .app-side { transform: translateX(100%); }
+  [dir="rtl"] .app-shell.side-open .app-side { transform: none; }
+}
+
+/* Prices, phone numbers, IDs stay LTR inside RTL text */
+[dir="rtl"] .fare-value, [dir="rtl"] .stat-value, [dir="rtl"] .num, [dir="rtl"] .ltr,
+[dir="rtl"] input[type="tel"], [dir="rtl"] input[type="email"] { direction: ltr; unicode-bidi: isolate; }
+[dir="rtl"] input[type="tel"], [dir="rtl"] input[type="email"] { text-align: right; }
+
+/* Time-series charts keep a left-to-right time axis */
+[dir="rtl"] .chart svg { direction: ltr; }

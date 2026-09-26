@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vehicles — Kaarvan Admin</title>
+<meta name="description" content="Fleet management: add, edit and remove vehicles, availability and pricing.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://www.kaarvan.example/dashboard/vehicles.html">
+<meta name="theme-color" content="#15171A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Crect width='34' height='34' rx='8' fill='%2315171A'/%3E%3Cpath d='M10 24 L17 9 L24 24' fill='none' stroke='%23D4A24C' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kaarvan">
+<meta property="og:title" content="Vehicles — Kaarvan Admin">
+<meta property="og:description" content="Fleet management: add, edit and remove vehicles, availability and pricing.">
+<meta property="og:url" content="https://www.kaarvan.example/dashboard/vehicles.html">
+<meta property="og:image" content="https://www.kaarvan.example/assets/images/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_IN">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vehicles — Kaarvan Admin">
+<meta name="twitter:description" content="Fleet management: add, edit and remove vehicles, availability and pricing.">
+<meta name="twitter:image" content="https://www.kaarvan.example/assets/images/og-cover.jpg">
+
+<script>
+  /* Apply saved theme + language before first paint (no flash) */
+  (function () {
+    try {
+      var t = localStorage.getItem('mobility-theme');
+      if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-bs-theme', t);
+      var l = localStorage.getItem('mobility-lang');
+      if (l) { document.documentElement.lang = l; document.documentElement.dir = (l === 'ar' || l === 'he') ? 'rtl' : 'ltr'; }
+      var d = localStorage.getItem('mobility-dir');
+      if (d === 'rtl' || d === 'ltr') document.documentElement.dir = d;
+    } catch (e) {}
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/dark-mode.css">
+<link rel="stylesheet" href="../assets/css/rtl.css">
+
+
+</head>
+<body>
+<div id="preloader" class="preloader" role="status" aria-live="polite">
+  <span class="preloader-mark" aria-hidden="true">
+    <svg viewBox="0 0 44 44"><circle class="preloader-ring" cx="22" cy="22" r="19"></circle></svg>
+  </span>
+  <span class="preloader-word">Kaarvan</span>
+  <span class="visually-hidden">Loading…</span>
+</div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="app-shell">
+  <aside class="app-side" id="appSide" aria-label="Dashboard navigation">
+    <a class="brand" href="../pages/index.html" aria-label="Kaarvan home"><img class="brand-logo" src="../assets/images/logo-light.png" alt="Kaarvan" width="364" height="120"></a>
+    <div class="side-label">Dashboard</div>
+<ul class="side-nav"><li><a href="index.html"><i class="bi bi-grid-1x2" aria-hidden="true"></i>Overview</a></li><li><a href="bookings.html"><i class="bi bi-journal-text" aria-hidden="true"></i>Bookings<span class="count">12</span></a></li><li><a href="bookings.html#rentals"><i class="bi bi-key" aria-hidden="true"></i>Rentals</a></li><li><a href="vehicles.html" class="active" aria-current="page"><i class="bi bi-car-front" aria-hidden="true"></i>Vehicles</a></li><li><a href="customers.html"><i class="bi bi-people" aria-hidden="true"></i>Customers</a></li><li><a href="drivers.html"><i class="bi bi-person-badge" aria-hidden="true"></i>Drivers</a></li><li><a href="vehicles.html#locations"><i class="bi bi-geo-alt" aria-hidden="true"></i>Locations</a></li></ul>
+<div class="side-label">Finance &amp; comms</div>
+<ul class="side-nav"><li><a href="payments.html"><i class="bi bi-credit-card" aria-hidden="true"></i>Payments</a></li><li><a href="messages.html"><i class="bi bi-chat-dots" aria-hidden="true"></i>Messages<span class="count">4</span></a></li><li><a href="customers.html#reviews"><i class="bi bi-star" aria-hidden="true"></i>Reviews</a></li><li><a href="settings.html#booking"><i class="bi bi-ticket-perforated" aria-hidden="true"></i>Coupons</a></li></ul>
+<div class="side-label">Insights</div>
+<ul class="side-nav"><li><a href="reports.html"><i class="bi bi-bar-chart-line" aria-hidden="true"></i>Reports</a></li><li><a href="settings.html#notifications"><i class="bi bi-bell" aria-hidden="true"></i>Notifications</a></li><li><a href="settings.html"><i class="bi bi-gear" aria-hidden="true"></i>Settings</a></li></ul>
+    <div class="side-foot"><div class="side-card"><strong>Fleet health</strong>94% of vehicles on the road today.<div class="progress-line mt-2"><span class="amber" style="width:94%"></span></div></div></div>
+  </aside>
+  <div class="app-overlay" aria-hidden="true"></div>
+  <div class="app-main">
+    <header class="app-top">
+      <button class="icon-btn side-toggle" type="button" aria-controls="appSide" aria-expanded="false" aria-label="Open navigation"><i class="bi bi-layout-sidebar" aria-hidden="true"></i></button>
+      <form class="search d-none d-md-block" role="search" onsubmit="return false">
+        <i class="bi bi-search" aria-hidden="true"></i>
+        <label class="visually-hidden" for="topSearch">Search</label>
+        <input class="form-control" id="topSearch" type="search" placeholder="Search bookings, customers, vehicles…">
+      </form>
+      <div class="tools">
+        <div class="dropdown">
+  <button class="icon-btn lang-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Change language">
+    <i class="bi bi-globe2" aria-hidden="true"></i><span data-lang-current>EN</span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end"><li><a class="dropdown-item" href="#" data-lang="en" lang="en">English</a></li><li><a class="dropdown-item" href="#" data-lang="hi" lang="hi">हिन्दी</a></li><li><a class="dropdown-item" href="#" data-lang="ta" lang="ta">தமிழ்</a></li><li><a class="dropdown-item" href="#" data-lang="ar" lang="ar">العربية (RTL)</a></li><li><a class="dropdown-item" href="#" data-lang="he" lang="he">עברית (RTL)</a></li></ul>
+</div>
+        <button class="icon-btn theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme">
+  <i class="bi bi-moon-stars" aria-hidden="true"></i><i class="bi bi-sun" aria-hidden="true"></i>
+</button>
+        <div class="dropdown">
+          <button class="icon-btn dot-badge" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Notifications, 3 unread"><i class="bi bi-bell" aria-hidden="true"></i></button>
+          <div class="dropdown-menu dropdown-menu-end p-0" style="width:320px">
+            <div class="p-3 border-bottom d-flex justify-content-between"><strong>Notifications</strong><a href="#" class="small">Mark all read</a></div>
+            <div class="list-rows p-3">
+              <div><i class="bi bi-calendar-plus fs-5" aria-hidden="true"></i><div class="lr-main"><strong>New booking KV-204918</strong><small>Airport transfer · 2 min ago</small></div></div>
+              <div><i class="bi bi-exclamation-triangle fs-5" aria-hidden="true"></i><div class="lr-main"><strong>Service due: TN 09 KV 2210</strong><small>Innova Hycross · 1 h ago</small></div></div>
+              <div><i class="bi bi-credit-card fs-5" aria-hidden="true"></i><div class="lr-main"><strong>Refund processed ₹1,840</strong><small>TXN-88213 · 3 h ago</small></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="d-flex align-items-center gap-2 border-0 bg-transparent p-0" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account menu for Priya Raman" style="min-height:44px">
+            <img class="avatar" src="../assets/images/customer10.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">
+            <span class="d-none d-lg-block text-start lh-sm"><strong class="d-block small">Priya Raman</strong><small class="text-muted">Operations Admin</small></span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#"><i class="bi bi-person me-2" aria-hidden="true"></i>Profile</a></li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-gear me-2" aria-hidden="true"></i>Settings</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="../pages/login.html"><i class="bi bi-box-arrow-right me-2" aria-hidden="true"></i>Log out</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main id="main" class="app-content" tabindex="-1">
+
+<div class="page-bar"><div><h1>Vehicles</h1><p class="text-muted mb-0">2,812 vehicles across 34 hubs.</p></div>
+  <button class="btn btn-ink" type="button" data-bs-toggle="modal" data-bs-target="#vehModal"><i class="bi bi-plus-lg me-2" aria-hidden="true"></i>Add Vehicle</button></div>
+<div class="row g-3 mb-3">
+  <div class="col-6 col-lg-3"><div class="stat-card">
+  <div class="stat-label">Available<i class="bi bi-check2-circle" aria-hidden="true"></i></div>
+  <div class="stat-value">1,936</div>
+  <div class="trend up"><i class="bi bi-arrow-up-right" aria-hidden="true"></i> 69% of fleet</div>
+</div></div>
+  <div class="col-6 col-lg-3"><div class="stat-card">
+  <div class="stat-label">Rented / on trip<i class="bi bi-key" aria-hidden="true"></i></div>
+  <div class="stat-value">702</div>
+  <div class="trend up"><i class="bi bi-arrow-up-right" aria-hidden="true"></i> 25% of fleet</div>
+</div></div>
+  <div class="col-6 col-lg-3"><div class="stat-card">
+  <div class="stat-label">In maintenance<i class="bi bi-tools" aria-hidden="true"></i></div>
+  <div class="stat-value">148</div>
+  <div class="trend down"><i class="bi bi-arrow-down-right" aria-hidden="true"></i> 12 due this week</div>
+</div></div>
+  <div class="col-6 col-lg-3" id="locations"><div class="stat-card">
+  <div class="stat-label">Hubs<i class="bi bi-geo-alt" aria-hidden="true"></i></div>
+  <div class="stat-value">34</div>
+  <div class="trend up"><i class="bi bi-arrow-up-right" aria-hidden="true"></i> 8 cities</div>
+</div></div>
+</div>
+<div class="panel flush">
+  <form class="filter-bar p-3 border-bottom" data-table-filter="#vehTable" onsubmit="return false" aria-label="Filter vehicles">
+    <label class="visually-hidden" for="vq">Search</label><input class="form-control" id="vq" type="search" data-col="q" placeholder="Search name or registration…">
+    <label class="visually-hidden" for="vs">Status</label><select class="form-select" id="vs" data-col="status"><option value="all">All statuses</option><option value="available">Available</option><option value="rented">Rented</option><option value="maintenance">Maintenance</option></select>
+  </form>
+  <div class="table-wrap"><table class="k-table" id="vehTable"><caption class="visually-hidden">Fleet vehicles</caption>
+    <thead><tr><th scope="col">Vehicle</th><th scope="col">Category</th><th scope="col">Registration</th><th scope="col">Availability</th><th scope="col" class="num">Daily price</th><th scope="col">Status</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead>
+    <tbody><tr data-id="Toyota Camry Hybrid" data-status="available"><td><div class="cell-veh"><img src="../assets/images/Toyota%20Camry%20Hybrid.jpg" sizes="100vw" alt="Toyota Camry Hybrid" width="128" height="84" decoding="async" loading="lazy"><span><strong>Toyota Camry Hybrid</strong><small class="d-block text-muted">4 seats · Hybrid</small></span></div></td>
+<td>Premium Sedan</td><td><code>TN 09 KV 4417</code></td><td>Available</td><td class="num">₹3,299</td><td><span class="status status-available">Available</span></td>
+<td><div class="row-actions"><button class="icon-btn" type="button" data-action="view" aria-label="View Toyota Camry Hybrid"><i class="bi bi-eye" aria-hidden="true"></i></button><button class="icon-btn" type="button" data-bs-toggle="modal" data-bs-target="#vehModal" aria-label="Edit Toyota Camry Hybrid"><i class="bi bi-pencil" aria-hidden="true"></i></button><button class="icon-btn" type="button" data-action="delete" aria-label="Delete Toyota Camry Hybrid"><i class="bi bi-trash3" aria-hidden="true"></i></button></div></td></tr><tr data-id="Mercedes-Benz E-Class" data-status="rented"><td><div class="cell-veh"><img src="../assets/images/Mercedes-Benz%20E-Class.jpg" sizes="100vw" alt="Mercedes-Benz E-Class" width="128" height="84" decoding="async" loading="lazy"><span><strong>Mercedes-Benz E-Class</strong><small class="d-block text-muted">4 seats · Diesel</small></span></div></td>
+<td>Executive Luxury</td><td><code>TN 09 KV 1180</code></td><td>Rented</td><td class="num">₹8,999</td><td><span class="status status-rented">Rented</span></td>
+<td><div class="row-actions"><button class="icon-btn" type="button" data-action="view" aria-label="View Mercedes-Benz E-Class"><i class="bi bi-eye" aria-hidden="true"></i></button><button class="icon-btn" type="button" data-bs-toggle="modal" data-bs-target="#vehModal" aria-label="Edit Mercedes-Benz E-Class"><i class="bi bi-pencil" aria-hidden="true"></i></button><button class="icon-btn" type="button" data-action="delete" aria-label="Delete Mercedes-Benz E-Class"><i class="bi bi-trash3" aria-hidden="true"></i></button></div></td></tr><tr data-id="BMW 5 Series" data-status="available"><td><div class="cell-veh"><img src="../assets/images/BMW%205%20Series.jpg" sizes="100vw" alt="BMW 5 Series" width="128" height="84" decoding="async" loading="lazy"><span><strong>BMW 5 Series</strong><small class="d-block text-muted">4 seats · Petrol</small></span></div></td>
+<td>Executive Luxury</td><td><code>KA 03 KV 7721</code></td><td>Available</td><td class="num">₹8,499</td><td><span class="status status-available">Available</span></td>
+<td><div class="row-actions"><button class="icon-btn" type="button" data-action="view" aria-label="View BMW 5 Series"><i class="bi bi-eye" aria-hidden="true"></i></button><button class="icon-btn" type="button" data-bs-toggle="modal" data-bs-target="#vehModal" aria-label="Edit BMW 5 Series"><i class="bi bi-pencil" aria-hidden="true"></i></button><button class="icon-btn" type="button" data-action="delete" aria-label="Delete BMW 5 Series"><i class="bi bi-trash3" aria-hidden="true"></i></button></div></td></tr><tr data-id="Toyota Innova Hycross" data-status="maintenance"><td><div class="cell-veh"><img src="../assets/images/Toyota%20Innova%20Hycross.jpg" sizes="100vw" alt="Toyota Innova Hycross" width="128" height="84" decoding="async" loading="lazy"><span><strong>Toyota Innova Hycross</strong><small class="d-block text-muted">7 seats · Hybrid</small></span></div></td>
+<td>Family MPV</td><td><code>TN 09 KV 2210</code></td><td>In service</td><td class="num">₹3,999</td><td><span class="status status-maintenance">Maintenance</span></td>
+<td><div class="row-actions"><button class="icon-btn" type="button" data-action="view" aria-label="View Toyota Innova Hycross"><i class="bi bi-eye" aria-hidden="true"></i></button><button class="icon-btn" type="button" data-bs-toggle="modal" data-bs-target="#vehModal" aria-label="Edit Toyota Innova Hycross"><i class="bi bi-pencil" aria-hidden="true"></i></button><button class="icon-btn" type="button" data-action="delete" aria-label="Delete Toyota Innova Hycross"><i class="bi bi-trash3" aria-hidden="true"></i></button></div></td></tr><tr data-id="Kia Carnival" data-status="rented"><td><div class="cell-veh"><img src="../assets/images/Kia%20Carnival.jpg" sizes="100vw" alt="Kia Carnival" width="128" height="84" decoding="async" loading="lazy"><span><strong>Kia Carnival</strong><small class="d-block text-muted">7 seats · Diesel</small></span></div></td>
+<td>Premium Van</td><td><code>MH 02 KV 9034</code></td><td>Rented</td><td class="num">₹5,499</td><td><span class="status status-rented">Rented</span></td>
+<td><div class="row-actions"><button class="icon-btn" type="button" data-action="view" aria-label="View Kia Carnival"><i class="bi bi-eye" aria-hidden="true"></i></button><button class="icon-btn" type="button" data-bs-toggle="modal" data-bs-target="#vehModal" aria-label="Edit Kia Carnival"><i class="bi bi-pencil" aria-hidden="true"></i></button><button class="icon-btn" type="button" data-action="delete" aria-label="Delete Kia Carnival"><i class="bi bi-trash3" aria-hidden="true"></i></button></div></td></tr><tr data-id="Mercedes-Benz V-Class" data-status="available"><td><div class="cell-veh"><img src="../assets/images/Mercedes-Benz.jpg" sizes="100vw" alt="Mercedes-Benz V-Class" width="128" height="84" decoding="async" loading="lazy"><span><strong>Mercedes-Benz V-Class</strong><small class="d-block text-muted">6 seats · Diesel</small></span></div></td>
+<td>Luxury Van</td><td><code>TS 07 KV 5512</code></td><td>Available</td><td class="num">₹10,999</td><td><span class="status status-available">Available</span></td>
+<td><div class="row-actions"><button class="icon-btn" type="button" data-action="view" aria-label="View Mercedes-Benz V-Class"><i class="bi bi-eye" aria-hidden="true"></i></button><button class="icon-btn" type="button" data-bs-toggle="modal" data-bs-target="#vehModal" aria-label="Edit Mercedes-Benz V-Class"><i class="bi bi-pencil" aria-hidden="true"></i></button><button class="icon-btn" type="button" data-action="delete" aria-label="Delete Mercedes-Benz V-Class"><i class="bi bi-trash3" aria-hidden="true"></i></button></div></td></tr><tr data-id="Tesla Model 3" data-status="available"><td><div class="cell-veh"><img src="../assets/images/Tesla%20Model%203.jpg" sizes="100vw" alt="Tesla Model 3" width="128" height="84" decoding="async" loading="lazy"><span><strong>Tesla Model 3</strong><small class="d-block text-muted">4 seats · Electric</small></span></div></td>
+<td>Electric Sedan</td><td><code>KA 03 KV 0098</code></td><td>Available</td><td class="num">₹5,999</td><td><span class="status status-available">Available</span></td>
+<td><div class="row-actions"><button class="icon-btn" type="button" data-action="view" aria-label="View Tesla Model 3"><i class="bi bi-eye" aria-hidden="true"></i></button><button class="icon-btn" type="button" data-bs-toggle="modal" data-bs-target="#vehModal" aria-label="Edit Tesla Model 3"><i class="bi bi-pencil" aria-hidden="true"></i></button><button class="icon-btn" type="button" data-action="delete" aria-label="Delete Tesla Model 3"><i class="bi bi-trash3" aria-hidden="true"></i></button></div></td></tr><tr data-id="Range Rover Velar" data-status="rented"><td><div class="cell-veh"><img src="../assets/images/Range%20Rover%20Velar.jpg" sizes="100vw" alt="Range Rover Velar" width="128" height="84" decoding="async" loading="lazy"><span><strong>Range Rover Velar</strong><small class="d-block text-muted">4 seats · Diesel</small></span></div></td>
+<td>Luxury SUV</td><td><code>DL 8C KV 3321</code></td><td>Rented</td><td class="num">₹11,999</td><td><span class="status status-rented">Rented</span></td>
+<td><div class="row-actions"><button class="icon-btn" type="button" data-action="view" aria-label="View Range Rover Velar"><i class="bi bi-eye" aria-hidden="true"></i></button><button class="icon-btn" type="button" data-bs-toggle="modal" data-bs-target="#vehModal" aria-label="Edit Range Rover Velar"><i class="bi bi-pencil" aria-hidden="true"></i></button><button class="icon-btn" type="button" data-action="delete" aria-label="Delete Range Rover Velar"><i class="bi bi-trash3" aria-hidden="true"></i></button></div></td></tr></tbody></table></div>
+  <div class="table-foot"><span>Showing 1–8 of 2,812</span>
+  <nav aria-label="Vehicle pages"><div class="k-pagination">
+    <a href="#" aria-label="Previous page"><i class="bi bi-chevron-left" aria-hidden="true"></i></a>
+    <a href="#" aria-current="page">1</a><a href="#">2</a><a href="#">3</a><span aria-hidden="true">…</span><a href="#">161</a>
+    <a href="#" aria-label="Next page"><i class="bi bi-chevron-right" aria-hidden="true"></i></a>
+  </div></nav></div>
+</div>
+<div class="modal fade" id="vehModal" tabindex="-1" aria-labelledby="vehTitle" aria-hidden="true"><div class="modal-dialog modal-lg modal-dialog-scrollable"><div class="modal-content">
+  <div class="modal-header"><h2 class="modal-title h5" id="vehTitle">Add / edit vehicle</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+  <form class="modal-body row g-3" id="vehForm" data-validate-form data-success="Vehicle saved">
+    <div class="col-md-6"><label class="form-label" for="vn">Vehicle name</label><input class="form-control" id="vn" required placeholder="e.g. Toyota Camry Hybrid"></div>
+    <div class="col-md-3"><label class="form-label" for="vb">Brand</label><input class="form-control" id="vb" required></div>
+    <div class="col-md-3"><label class="form-label" for="vm">Model</label><input class="form-control" id="vm" required></div>
+    <div class="col-md-3"><label class="form-label" for="vy">Year</label><input class="form-control" id="vy" type="number" min="2018" max="2027" value="2025" required></div>
+    <div class="col-md-3"><label class="form-label" for="vc">Category</label><select class="form-select" id="vc" required><option value="">Select</option><option value="economy">Economy</option><option value="sedan">Sedan</option><option value="suv">SUV / MPV</option><option value="luxury">Luxury</option><option value="van">Van (6–7 seats)</option><option value="electric">Electric</option></select></div>
+    <div class="col-md-3"><label class="form-label" for="vr">Registration</label><input class="form-control" id="vr" required placeholder="TN 09 KV 0000"></div>
+    <div class="col-md-3"><label class="form-label" for="vse">Seats</label><input class="form-control" id="vse" type="number" min="2" max="12" value="4" required></div>
+    <div class="col-md-4"><label class="form-label" for="vf">Fuel</label><select class="form-select" id="vf"><option>Petrol</option><option>Diesel</option><option>Hybrid</option><option>Electric</option><option>CNG</option></select></div>
+    <div class="col-md-4"><label class="form-label" for="vt">Transmission</label><select class="form-select" id="vt"><option>Automatic</option><option>Manual</option></select></div>
+    <div class="col-md-4"><label class="form-label" for="vp">Price / day (₹)</label><input class="form-control" id="vp" type="number" min="500" required></div>
+    <div class="col-12"><span class="form-label">Images</span><div class="upload-zone"><i class="bi bi-cloud-arrow-up" aria-hidden="true"></i><label for="vimg" class="fw-bold text-body" style="cursor:pointer">Drop images or browse</label><input class="visually-hidden" id="vimg" type="file" accept="image/webp,image/jpeg,image/png" multiple><small class="d-block mt-1">WebP recommended · 1600×1000 px · up to 8 files</small></div></div>
+    <fieldset class="col-12"><legend class="form-label">Features</legend><div class="row g-2"><div class="col-6"><div class="form-check"><input class="form-check-input" type="checkbox" id="vf0"><label class="form-check-label" for="vf0">Air conditioning</label></div></div><div class="col-6"><div class="form-check"><input class="form-check-input" type="checkbox" id="vf1"><label class="form-check-label" for="vf1">Bluetooth / CarPlay</label></div></div><div class="col-6"><div class="form-check"><input class="form-check-input" type="checkbox" id="vf2"><label class="form-check-label" for="vf2">Sunroof</label></div></div><div class="col-6"><div class="form-check"><input class="form-check-input" type="checkbox" id="vf3"><label class="form-check-label" for="vf3">Child-seat anchors</label></div></div><div class="col-6"><div class="form-check"><input class="form-check-input" type="checkbox" id="vf4"><label class="form-check-label" for="vf4">GPS tracker</label></div></div><div class="col-6"><div class="form-check"><input class="form-check-input" type="checkbox" id="vf5"><label class="form-check-label" for="vf5">Dash camera</label></div></div></div></fieldset>
+    <div class="col-12 setting-row border-0 p-0"><div><strong>Available for booking</strong><p>Hidden from customers when off.</p></div><div class="form-check form-switch m-0"><input class="form-check-input" type="checkbox" role="switch" id="vav" checked aria-label="Available for booking"></div></div>
+    <div class="col-12 d-flex justify-content-end gap-2 pt-2"><button type="button" class="btn btn-line" data-bs-dismiss="modal">Cancel</button><button class="btn btn-ink" type="submit"><span class="btn-label">Save vehicle</span></button></div>
+  </form>
+</div></div></div>
+    </main>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
+<script src="../assets/js/dashboard.js" defer></script>
+</body>
+</html>

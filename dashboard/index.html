@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Overview — Kaarvan Admin</title>
+<meta name="description" content="Operations overview: revenue, bookings, fleet utilisation and booking status.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://www.kaarvan.example/dashboard/index.html">
+<meta name="theme-color" content="#15171A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Crect width='34' height='34' rx='8' fill='%2315171A'/%3E%3Cpath d='M10 24 L17 9 L24 24' fill='none' stroke='%23D4A24C' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kaarvan">
+<meta property="og:title" content="Overview — Kaarvan Admin">
+<meta property="og:description" content="Operations overview: revenue, bookings, fleet utilisation and booking status.">
+<meta property="og:url" content="https://www.kaarvan.example/dashboard/index.html">
+<meta property="og:image" content="https://www.kaarvan.example/assets/images/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_IN">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Overview — Kaarvan Admin">
+<meta name="twitter:description" content="Operations overview: revenue, bookings, fleet utilisation and booking status.">
+<meta name="twitter:image" content="https://www.kaarvan.example/assets/images/og-cover.jpg">
+
+<script>
+  /* Apply saved theme + language before first paint (no flash) */
+  (function () {
+    try {
+      var t = localStorage.getItem('mobility-theme');
+      if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-bs-theme', t);
+      var l = localStorage.getItem('mobility-lang');
+      if (l) { document.documentElement.lang = l; document.documentElement.dir = (l === 'ar' || l === 'he') ? 'rtl' : 'ltr'; }
+      var d = localStorage.getItem('mobility-dir');
+      if (d === 'rtl' || d === 'ltr') document.documentElement.dir = d;
+    } catch (e) {}
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/dark-mode.css">
+<link rel="stylesheet" href="../assets/css/rtl.css">
+
+
+</head>
+<body>
+<div id="preloader" class="preloader" role="status" aria-live="polite">
+  <span class="preloader-mark" aria-hidden="true">
+    <svg viewBox="0 0 44 44"><circle class="preloader-ring" cx="22" cy="22" r="19"></circle></svg>
+  </span>
+  <span class="preloader-word">Kaarvan</span>
+  <span class="visually-hidden">Loading…</span>
+</div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="app-shell">
+  <aside class="app-side" id="appSide" aria-label="Dashboard navigation">
+    <a class="brand" href="../pages/index.html" aria-label="Kaarvan home"><img class="brand-logo" src="../assets/images/logo-light.png" alt="Kaarvan" width="364" height="120"></a>
+    <div class="side-label">Dashboard</div>
+<ul class="side-nav"><li><a href="index.html" class="active" aria-current="page"><i class="bi bi-grid-1x2" aria-hidden="true"></i>Overview</a></li><li><a href="bookings.html"><i class="bi bi-journal-text" aria-hidden="true"></i>Bookings<span class="count">12</span></a></li><li><a href="bookings.html#rentals"><i class="bi bi-key" aria-hidden="true"></i>Rentals</a></li><li><a href="vehicles.html"><i class="bi bi-car-front" aria-hidden="true"></i>Vehicles</a></li><li><a href="customers.html"><i class="bi bi-people" aria-hidden="true"></i>Customers</a></li><li><a href="drivers.html"><i class="bi bi-person-badge" aria-hidden="true"></i>Drivers</a></li><li><a href="vehicles.html#locations"><i class="bi bi-geo-alt" aria-hidden="true"></i>Locations</a></li></ul>
+<div class="side-label">Finance &amp; comms</div>
+<ul class="side-nav"><li><a href="payments.html"><i class="bi bi-credit-card" aria-hidden="true"></i>Payments</a></li><li><a href="messages.html"><i class="bi bi-chat-dots" aria-hidden="true"></i>Messages<span class="count">4</span></a></li><li><a href="customers.html#reviews"><i class="bi bi-star" aria-hidden="true"></i>Reviews</a></li><li><a href="settings.html#booking"><i class="bi bi-ticket-perforated" aria-hidden="true"></i>Coupons</a></li></ul>
+<div class="side-label">Insights</div>
+<ul class="side-nav"><li><a href="reports.html"><i class="bi bi-bar-chart-line" aria-hidden="true"></i>Reports</a></li><li><a href="settings.html#notifications"><i class="bi bi-bell" aria-hidden="true"></i>Notifications</a></li><li><a href="settings.html"><i class="bi bi-gear" aria-hidden="true"></i>Settings</a></li></ul>
+    <div class="side-foot"><div class="side-card"><strong>Fleet health</strong>94% of vehicles on the road today.<div class="progress-line mt-2"><span class="amber" style="width:94%"></span></div></div></div>
+  </aside>
+  <div class="app-overlay" aria-hidden="true"></div>
+  <div class="app-main">
+    <header class="app-top">
+      <button class="icon-btn side-toggle" type="button" aria-controls="appSide" aria-expanded="false" aria-label="Open navigation"><i class="bi bi-layout-sidebar" aria-hidden="true"></i></button>
+      <form class="search d-none d-md-block" role="search" onsubmit="return false">
+        <i class="bi bi-search" aria-hidden="true"></i>
+        <label class="visually-hidden" for="topSearch">Search</label>
+        <input class="form-control" id="topSearch" type="search" placeholder="Search bookings, customers, vehicles…">
+      </form>
+      <div class="tools">
+        <div class="dropdown">
+  <button class="icon-btn lang-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Change language">
+    <i class="bi bi-globe2" aria-hidden="true"></i><span data-lang-current>EN</span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end"><li><a class="dropdown-item" href="#" data-lang="en" lang="en">English</a></li><li><a class="dropdown-item" href="#" data-lang="hi" lang="hi">हिन्दी</a></li><li><a class="dropdown-item" href="#" data-lang="ta" lang="ta">தமிழ்</a></li><li><a class="dropdown-item" href="#" data-lang="ar" lang="ar">العربية (RTL)</a></li><li><a class="dropdown-item" href="#" data-lang="he" lang="he">עברית (RTL)</a></li></ul>
+</div>
+        <button class="icon-btn theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme">
+  <i class="bi bi-moon-stars" aria-hidden="true"></i><i class="bi bi-sun" aria-hidden="true"></i>
+</button>
+        <div class="dropdown">
+          <button class="icon-btn dot-badge" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Notifications, 3 unread"><i class="bi bi-bell" aria-hidden="true"></i></button>
+          <div class="dropdown-menu dropdown-menu-end p-0" style="width:320px">
+            <div class="p-3 border-bottom d-flex justify-content-between"><strong>Notifications</strong><a href="#" class="small">Mark all read</a></div>
+            <div class="list-rows p-3">
+              <div><i class="bi bi-calendar-plus fs-5" aria-hidden="true"></i><div class="lr-main"><strong>New booking KV-204918</strong><small>Airport transfer · 2 min ago</small></div></div>
+              <div><i class="bi bi-exclamation-triangle fs-5" aria-hidden="true"></i><div class="lr-main"><strong>Service due: TN 09 KV 2210</strong><small>Innova Hycross · 1 h ago</small></div></div>
+              <div><i class="bi bi-credit-card fs-5" aria-hidden="true"></i><div class="lr-main"><strong>Refund processed ₹1,840</strong><small>TXN-88213 · 3 h ago</small></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="d-flex align-items-center gap-2 border-0 bg-transparent p-0" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account menu for Priya Raman" style="min-height:44px">
+            <img class="avatar" src="../assets/images/customer10.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">
+            <span class="d-none d-lg-block text-start lh-sm"><strong class="d-block small">Priya Raman</strong><small class="text-muted">Operations Admin</small></span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#"><i class="bi bi-person me-2" aria-hidden="true"></i>Profile</a></li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-gear me-2" aria-hidden="true"></i>Settings</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="../pages/login.html"><i class="bi bi-box-arrow-right me-2" aria-hidden="true"></i>Log out</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main id="main" class="app-content" tabindex="-1">
+
+<div class="page-bar"><div><h1>Overview</h1><p class="text-muted mb-0">Thursday, 24 September 2026 · all cities</p></div>
+  <div class="d-flex flex-wrap gap-2"><div class="seg" role="group" aria-label="Chart range" data-range-for="#revChart,#bookChart"><button type="button" data-range="7d" aria-pressed="false">7D</button><button type="button" data-range="30d" aria-pressed="false">30D</button><button type="button" data-range="12m" aria-pressed="true">12M</button></div>
+  <a class="btn btn-ink" href="bookings.html"><i class="bi bi-plus-lg me-2" aria-hidden="true"></i>New booking</a></div></div>
+<div class="row g-3 mb-3"><div class="col-sm-6 col-xl-4 col-xxl-2"><div class="stat-card dark">
+  <div class="stat-label">Total Revenue<i class="bi bi-currency-rupee" aria-hidden="true"></i></div>
+  <div class="stat-value">₹48.6L</div>
+  <div class="trend up"><i class="bi bi-arrow-up-right" aria-hidden="true"></i> 12.4% vs last month</div>
+</div></div><div class="col-sm-6 col-xl-4 col-xxl-2"><div class="stat-card">
+  <div class="stat-label">Total Bookings<i class="bi bi-journal-check" aria-hidden="true"></i></div>
+  <div class="stat-value"><span data-count="6284" data-prefix="" data-suffix="">6,284</span></div>
+  <div class="trend up"><i class="bi bi-arrow-up-right" aria-hidden="true"></i> 8.1% vs last month</div>
+</div></div><div class="col-sm-6 col-xl-4 col-xxl-2"><div class="stat-card">
+  <div class="stat-label">Active Rentals<i class="bi bi-key" aria-hidden="true"></i></div>
+  <div class="stat-value"><span data-count="412" data-prefix="" data-suffix="">412</span></div>
+  <div class="trend up"><i class="bi bi-arrow-up-right" aria-hidden="true"></i> 3.2% vs last week</div>
+</div></div><div class="col-sm-6 col-xl-4 col-xxl-2"><div class="stat-card">
+  <div class="stat-label">Registered Customers<i class="bi bi-people" aria-hidden="true"></i></div>
+  <div class="stat-value"><span data-count="92410" data-prefix="" data-suffix="">92,410</span></div>
+  <div class="trend up"><i class="bi bi-arrow-up-right" aria-hidden="true"></i> 1,208 new this month</div>
+</div></div><div class="col-sm-6 col-xl-4 col-xxl-2"><div class="stat-card">
+  <div class="stat-label">Available Vehicles<i class="bi bi-car-front" aria-hidden="true"></i></div>
+  <div class="stat-value"><span data-count="1936" data-prefix="" data-suffix="">1,936</span></div>
+  <div class="trend up"><i class="bi bi-arrow-up-right" aria-hidden="true"></i> of 2,812 in fleet</div>
+</div></div><div class="col-sm-6 col-xl-4 col-xxl-2"><div class="stat-card">
+  <div class="stat-label">Pending Requests<i class="bi bi-hourglass-split" aria-hidden="true"></i></div>
+  <div class="stat-value"><span data-count="38" data-prefix="" data-suffix="">38</span></div>
+  <div class="trend down"><i class="bi bi-arrow-down-right" aria-hidden="true"></i> 6 more than yesterday</div>
+</div></div></div>
+<div class="row g-3 mb-3">
+  <div class="col-xl-8"><div class="panel"><div class="panel-head"><h2>Revenue analytics</h2><div class="legend"><span><i style="background:var(--text)"></i>Revenue</span><span><i style="background:var(--k-amber)"></i>Target</span></div></div>
+    <div class="chart" id="revChart" data-chart="line" data-format="inr" data-labels="Oct,Nov,Dec,Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep" data-series="[{&quot;name&quot;: &quot;Revenue&quot;, &quot;values&quot;: [3120000, 3380000, 4210000, 3640000, 3520000, 3810000, 4020000, 4480000, 4110000, 4390000, 4570000, 4860000]}, {&quot;name&quot;: &quot;Target&quot;, &quot;values&quot;: [3300000, 3400000, 3800000, 3700000, 3700000, 3900000, 4000000, 4200000, 4200000, 4400000, 4500000, 4700000], &quot;alt&quot;: true}]" role="img" aria-label="Monthly revenue vs target, last 12 months"></div></div></div>
+  <div class="col-xl-4"><div class="panel"><div class="panel-head"><h2>Vehicle utilization</h2><span class="small text-muted">Today</span></div>
+    <div class="donut-wrap" data-donut="[{&quot;label&quot;: &quot;Sedan&quot;, &quot;value&quot;: 38}, {&quot;label&quot;: &quot;SUV / MPV&quot;, &quot;value&quot;: 27}, {&quot;label&quot;: &quot;Luxury&quot;, &quot;value&quot;: 14}, {&quot;label&quot;: &quot;Electric&quot;, &quot;value&quot;: 12}, {&quot;label&quot;: &quot;Van&quot;, &quot;value&quot;: 9}]" data-center="81%" data-sub="Utilised" aria-label="Fleet utilisation by vehicle class"></div></div></div>
+</div>
+<div class="row g-3 mb-3">
+  <div class="col-xl-6"><div class="panel"><div class="panel-head"><h2>Booking analytics</h2><div class="legend"><span><i style="background:var(--text)"></i>Taxi</span><span><i style="background:var(--k-amber)"></i>Rental</span></div></div>
+    <div class="chart" id="bookChart" data-chart="bar" data-labels="Mon,Tue,Wed,Thu,Fri,Sat,Sun" data-series="[{&quot;name&quot;: &quot;Taxi&quot;, &quot;values&quot;: [820, 910, 880, 960, 1040, 1180, 1120]}, {&quot;name&quot;: &quot;Rental&quot;, &quot;values&quot;: [210, 240, 230, 260, 310, 380, 350], &quot;alt&quot;: true}]" role="img" aria-label="Bookings per day this week, taxi vs rental"></div></div></div>
+  <div class="col-xl-3 col-md-6"><div class="panel"><div class="panel-head"><h2>Booking status</h2><span class="small text-muted">This month</span></div><div class="mb-3"><div class="d-flex justify-content-between small fw-bold mb-1"><span>Confirmed</span><span>2,840 · 45%</span></div><div class="progress-line"><span style="width:45.2%;background:#1F6B43"></span></div></div><div class="mb-3"><div class="d-flex justify-content-between small fw-bold mb-1"><span>Pending</span><span>382 · 6%</span></div><div class="progress-line"><span style="width:6.1%;background:#7E520F"></span></div></div><div class="mb-3"><div class="d-flex justify-content-between small fw-bold mb-1"><span>Completed</span><span>2,716 · 43%</span></div><div class="progress-line"><span style="width:43.2%;background:#22557F"></span></div></div><div class="mb-3"><div class="d-flex justify-content-between small fw-bold mb-1"><span>Cancelled</span><span>346 · 6%</span></div><div class="progress-line"><span style="width:5.5%;background:#962A1F"></span></div></div><p class="small text-muted mb-0">Cancellation rate 5.5% · target under 6%</p></div></div>
+  <div class="col-xl-3 col-md-6"><div class="panel"><div class="panel-head"><h2>Top cities</h2></div><div class="list-rows">
+    <div><span class="fw-bold" style="width:22px">1</span><div class="lr-main"><strong>Bengaluru</strong><small>1,412 bookings</small></div><span class="trend up">+14%</span></div><div><span class="fw-bold" style="width:22px">2</span><div class="lr-main"><strong>Delhi NCR</strong><small>1,288 bookings</small></div><span class="trend up">+9%</span></div><div><span class="fw-bold" style="width:22px">3</span><div class="lr-main"><strong>Chennai</strong><small>1,104 bookings</small></div><span class="trend up">+11%</span></div><div><span class="fw-bold" style="width:22px">4</span><div class="lr-main"><strong>Mumbai</strong><small>986 bookings</small></div><span class="trend up">+6%</span></div><div><span class="fw-bold" style="width:22px">5</span><div class="lr-main"><strong>Hyderabad</strong><small>742 bookings</small></div><span class="trend up">+12%</span></div></div></div></div>
+</div>
+<div class="panel flush"><div class="panel-head"><h2>Recent bookings</h2><a class="link-arrow small" href="bookings.html">View all <i class="bi bi-arrow-right" aria-hidden="true"></i></a></div>
+  <div class="table-wrap mt-3"><table class="k-table">
+    <caption class="visually-hidden">Five most recent bookings</caption>
+    <thead><tr><th scope="col">Booking</th><th scope="col">Customer</th>
+      <th scope="col">Service</th><th scope="col">Vehicle</th><th scope="col" class="num">Amount</th>
+      <th scope="col">Status</th></tr></thead><tbody><tr><td><strong>KV-204918</strong></td>
+        <td><div class="cell-user">
+          <img src="../assets/images/customer10.jpg" alt="" width="48" height="48" loading="lazy" decoding="async">
+          <span>Ananya Iyer<small>ananya@example.com</small>
+          </span></div></td><td>Airport</td><td>Camry Hybrid</td>
+          <td class="num">₹1,099</td><td><span class="status status-confirmed">Confirmed</span>
+          </td></tr><tr><td><strong>KV-204917</strong></td><td><div class="cell-user">
+            <img src="../assets/images/customer9.jpg" alt="" width="48" height="48" loading="lazy" decoding="async">
+            <span>Karthik S.<small>karthik@northwind.example</small>
+            </span></div></td><td>Corporate</td><td>E-Class</td>
+            <td class="num">₹8,999</td><td><span class="status status-pending">Pending</span>
+            </td></tr><tr><td><strong>KV-204915</strong></td><td><div class="cell-user">
+              <img src="../assets/images/customer4.jpg" alt="" width="48" height="48" loading="lazy" decoding="async">
+              <span>Rohit Menon<small>rohit@example.com</small>
+              </span></div></td><td>Rental</td><td>Innova Hycross</td>
+              <td class="num">₹12,597</td><td><span class="status status-confirmed">Confirmed</span>
+              </td></tr><tr><td><strong>KV-204912</strong></td><td><div class="cell-user">
+                <img src="../assets/images/customer7.jpg" alt="" width="48" height="48" loading="lazy" decoding="async">
+                <span>Vikram Shah<small>vikram@example.com</small>
+                </span></div></td><td>Hourly</td><td>BMW 5 Series</td>
+                <td class="num">₹4,599</td><td><span class="status status-completed">Completed</span>
+                </td></tr><tr><td><strong>KV-204909</strong></td><td><div class="cell-user">
+                  <img src="../assets/images/customer5.jpg" alt="" width="48" height="48" loading="lazy" decoding="async">
+                  <span>Meera Pillai<small>meera@example.com</small>
+                  </span></div></td><td>Outstation</td><td>Fortuner</td>
+                  <td class="num">₹9,840</td><td><span class="status status-cancelled">Cancelled</span>
+                  </td></tr></tbody></table></div></div>
+    </main>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
+<script src="../assets/js/dashboard.js" defer></script>
+</body>
+</html>

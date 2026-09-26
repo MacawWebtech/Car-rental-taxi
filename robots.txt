@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /dashboard/
+Disallow: /pages/user-dashboard.html
+Disallow: /pages/login.html
+Disallow: /pages/register.html
+
+Sitemap: https://www.kaarvan.example/sitemap.xml

@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drivers — Kaarvan Admin</title>
+<meta name="description" content="Driver management: status, assigned vehicles, ratings and trips.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://www.kaarvan.example/dashboard/drivers.html">
+<meta name="theme-color" content="#15171A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Crect width='34' height='34' rx='8' fill='%2315171A'/%3E%3Cpath d='M10 24 L17 9 L24 24' fill='none' stroke='%23D4A24C' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kaarvan">
+<meta property="og:title" content="Drivers — Kaarvan Admin">
+<meta property="og:description" content="Driver management: status, assigned vehicles, ratings and trips.">
+<meta property="og:url" content="https://www.kaarvan.example/dashboard/drivers.html">
+<meta property="og:image" content="https://www.kaarvan.example/assets/images/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_IN">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Drivers — Kaarvan Admin">
+<meta name="twitter:description" content="Driver management: status, assigned vehicles, ratings and trips.">
+<meta name="twitter:image" content="https://www.kaarvan.example/assets/images/og-cover.jpg">
+
+<script>
+  /* Apply saved theme + language before first paint (no flash) */
+  (function () {
+    try {
+      var t = localStorage.getItem('mobility-theme');
+      if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-bs-theme', t);
+      var l = localStorage.getItem('mobility-lang');
+      if (l) { document.documentElement.lang = l; document.documentElement.dir = (l === 'ar' || l === 'he') ? 'rtl' : 'ltr'; }
+      var d = localStorage.getItem('mobility-dir');
+      if (d === 'rtl' || d === 'ltr') document.documentElement.dir = d;
+    } catch (e) {}
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/dark-mode.css">
+<link rel="stylesheet" href="../assets/css/rtl.css">
+
+
+</head>
+<body>
+<div id="preloader" class="preloader" role="status" aria-live="polite">
+  <span class="preloader-mark" aria-hidden="true">
+    <svg viewBox="0 0 44 44"><circle class="preloader-ring" cx="22" cy="22" r="19"></circle></svg>
+  </span>
+  <span class="preloader-word">Kaarvan</span>
+  <span class="visually-hidden">Loading…</span>
+</div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="app-shell">
+  <aside class="app-side" id="appSide" aria-label="Dashboard navigation">
+    <a class="brand" href="../pages/index.html" aria-label="Kaarvan home"><img class="brand-logo" src="../assets/images/logo-light.png" alt="Kaarvan" width="364" height="120"></a>
+    <div class="side-label">Dashboard</div>
+<ul class="side-nav"><li><a href="index.html"><i class="bi bi-grid-1x2" aria-hidden="true"></i>Overview</a></li><li><a href="bookings.html"><i class="bi bi-journal-text" aria-hidden="true"></i>Bookings<span class="count">12</span></a></li><li><a href="bookings.html#rentals"><i class="bi bi-key" aria-hidden="true"></i>Rentals</a></li><li><a href="vehicles.html"><i class="bi bi-car-front" aria-hidden="true"></i>Vehicles</a></li><li><a href="customers.html"><i class="bi bi-people" aria-hidden="true"></i>Customers</a></li><li><a href="drivers.html" class="active" aria-current="page"><i class="bi bi-person-badge" aria-hidden="true"></i>Drivers</a></li><li><a href="vehicles.html#locations"><i class="bi bi-geo-alt" aria-hidden="true"></i>Locations</a></li></ul>
+<div class="side-label">Finance &amp; comms</div>
+<ul class="side-nav"><li><a href="payments.html"><i class="bi bi-credit-card" aria-hidden="true"></i>Payments</a></li><li><a href="messages.html"><i class="bi bi-chat-dots" aria-hidden="true"></i>Messages<span class="count">4</span></a></li><li><a href="customers.html#reviews"><i class="bi bi-star" aria-hidden="true"></i>Reviews</a></li><li><a href="settings.html#booking"><i class="bi bi-ticket-perforated" aria-hidden="true"></i>Coupons</a></li></ul>
+<div class="side-label">Insights</div>
+<ul class="side-nav"><li><a href="reports.html"><i class="bi bi-bar-chart-line" aria-hidden="true"></i>Reports</a></li><li><a href="settings.html#notifications"><i class="bi bi-bell" aria-hidden="true"></i>Notifications</a></li><li><a href="settings.html"><i class="bi bi-gear" aria-hidden="true"></i>Settings</a></li></ul>
+    <div class="side-foot"><div class="side-card"><strong>Fleet health</strong>94% of vehicles on the road today.<div class="progress-line mt-2"><span class="amber" style="width:94%"></span></div></div></div>
+  </aside>
+  <div class="app-overlay" aria-hidden="true"></div>
+  <div class="app-main">
+    <header class="app-top">
+      <button class="icon-btn side-toggle" type="button" aria-controls="appSide" aria-expanded="false" aria-label="Open navigation"><i class="bi bi-layout-sidebar" aria-hidden="true"></i></button>
+      <form class="search d-none d-md-block" role="search" onsubmit="return false">
+        <i class="bi bi-search" aria-hidden="true"></i>
+        <label class="visually-hidden" for="topSearch">Search</label>
+        <input class="form-control" id="topSearch" type="search" placeholder="Search bookings, customers, vehicles…">
+      </form>
+      <div class="tools">
+        <div class="dropdown">
+  <button class="icon-btn lang-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Change language">
+    <i class="bi bi-globe2" aria-hidden="true"></i><span data-lang-current>EN</span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end"><li><a class="dropdown-item" href="#" data-lang="en" lang="en">English</a></li><li><a class="dropdown-item" href="#" data-lang="hi" lang="hi">हिन्दी</a></li><li><a class="dropdown-item" href="#" data-lang="ta" lang="ta">தமிழ்</a></li><li><a class="dropdown-item" href="#" data-lang="ar" lang="ar">العربية (RTL)</a></li><li><a class="dropdown-item" href="#" data-lang="he" lang="he">עברית (RTL)</a></li></ul>
+</div>
+        <button class="icon-btn theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme">
+  <i class="bi bi-moon-stars" aria-hidden="true"></i><i class="bi bi-sun" aria-hidden="true"></i>
+</button>
+        <div class="dropdown">
+          <button class="icon-btn dot-badge" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Notifications, 3 unread"><i class="bi bi-bell" aria-hidden="true"></i></button>
+          <div class="dropdown-menu dropdown-menu-end p-0" style="width:320px">
+            <div class="p-3 border-bottom d-flex justify-content-between"><strong>Notifications</strong><a href="#" class="small">Mark all read</a></div>
+            <div class="list-rows p-3">
+              <div><i class="bi bi-calendar-plus fs-5" aria-hidden="true"></i><div class="lr-main"><strong>New booking KV-204918</strong><small>Airport transfer · 2 min ago</small></div></div>
+              <div><i class="bi bi-exclamation-triangle fs-5" aria-hidden="true"></i><div class="lr-main"><strong>Service due: TN 09 KV 2210</strong><small>Innova Hycross · 1 h ago</small></div></div>
+              <div><i class="bi bi-credit-card fs-5" aria-hidden="true"></i><div class="lr-main"><strong>Refund processed ₹1,840</strong><small>TXN-88213 · 3 h ago</small></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="d-flex align-items-center gap-2 border-0 bg-transparent p-0" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account menu for Priya Raman" style="min-height:44px">
+            <img class="avatar" src="../assets/images/customer10.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">
+            <span class="d-none d-lg-block text-start lh-sm"><strong class="d-block small">Priya Raman</strong><small class="text-muted">Operations Admin</small></span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#"><i class="bi bi-person me-2" aria-hidden="true"></i>Profile</a></li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-gear me-2" aria-hidden="true"></i>Settings</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="../pages/login.html"><i class="bi bi-box-arrow-right me-2" aria-hidden="true"></i>Log out</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main id="main" class="app-content" tabindex="-1">
+
+<div class="page-bar"><div><h1>Drivers</h1><p class="text-muted mb-0">3,412 driver-partners · 2,108 online now</p></div><button class="btn btn-ink" type="button" data-toast="Driver onboarding form (connect to HRMS)"><i class="bi bi-person-plus me-2" aria-hidden="true"></i>Add driver</button></div>
+<div class="row g-3 mb-3">
+  <div class="col-6 col-lg-3"><div class="stat-card">
+  <div class="stat-label">Available<i class="bi bi-circle" aria-hidden="true"></i></div>
+  <div class="stat-value">1,284</div>
+  <div class="trend up"><i class="bi bi-arrow-up-right" aria-hidden="true"></i> 38%</div>
+</div></div><div class="col-6 col-lg-3"><div class="stat-card">
+  <div class="stat-label">On Trip<i class="bi bi-signpost" aria-hidden="true"></i></div>
+  <div class="stat-value">824</div>
+  <div class="trend up"><i class="bi bi-arrow-up-right" aria-hidden="true"></i> 24%</div>
+</div></div>
+  <div class="col-6 col-lg-3"><div class="stat-card">
+  <div class="stat-label">Offline<i class="bi bi-moon" aria-hidden="true"></i></div>
+  <div class="stat-value">1,262</div>
+  <div class="trend up"><i class="bi bi-arrow-up-right" aria-hidden="true"></i> 37%</div>
+</div></div><div class="col-6 col-lg-3"><div class="stat-card">
+  <div class="stat-label">Suspended<i class="bi bi-slash-circle" aria-hidden="true"></i></div>
+  <div class="stat-value">42</div>
+  <div class="trend down"><i class="bi bi-arrow-down-right" aria-hidden="true"></i> 3 this week</div>
+</div></div>
+</div>
+<div class="panel flush">
+  <div class="filter-bar p-3 border-bottom" data-table-filter="#drvTable">
+    <label class="visually-hidden" for="dq">Search</label><input class="form-control" id="dq" type="search" data-col="q" placeholder="Search drivers…">
+    <div class="seg" role="group" aria-label="Status filter"><button type="button" aria-pressed="true" onclick="document.getElementById('ds').value='all';document.getElementById('ds').dispatchEvent(new Event('change',{bubbles:true}))">All</button><button type="button" aria-pressed="false" onclick="document.getElementById('ds').value='available';document.getElementById('ds').dispatchEvent(new Event('change',{bubbles:true}))">Available</button><button type="button" aria-pressed="false" onclick="document.getElementById('ds').value='on-trip';document.getElementById('ds').dispatchEvent(new Event('change',{bubbles:true}))">On Trip</button><button type="button" aria-pressed="false" onclick="document.getElementById('ds').value='offline';document.getElementById('ds').dispatchEvent(new Event('change',{bubbles:true}))">Offline</button><button type="button" aria-pressed="false" onclick="document.getElementById('ds').value='suspended';document.getElementById('ds').dispatchEvent(new Event('change',{bubbles:true}))">Suspended</button></div>
+    <select class="visually-hidden" id="ds" data-col="status" aria-hidden="true" tabindex="-1"><option value="all">all</option><option value="available">available</option><option value="on-trip">on-trip</option><option value="offline">offline</option><option value="suspended">suspended</option></select>
+  </div>
+  <div class="table-wrap"><table class="k-table" id="drvTable"><caption class="visually-hidden">Drivers</caption>
+    <thead><tr><th scope="col">Driver</th><th scope="col">Phone</th><th scope="col">License</th><th scope="col">Assigned vehicle</th><th scope="col">Rating</th><th scope="col" class="num">Total trips</th><th scope="col">Availability</th><th scope="col">Status</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead>
+    <tbody><tr data-id="Ramesh Kumar" data-status="available"><td>
+      <div class="cell-user"><img src="../assets/images/driver1.jpg" alt="Photo of Ramesh Kumar" width="48" height="48" loading="lazy" decoding="async"><span><strong>Ramesh Kumar</strong><small>DRV-1040</small></span></div></td>
+<td dir="ltr">+91 98400 21000</td><td><code>TN222019000040</code></td><td>Camry Hybrid · TN 09 KV 4417</td>
+<td><span class="v-rating"><i class="bi bi-star-fill" aria-hidden="true"></i>4.9</span>
+</td><td class="num">3,812</td>
+<td><div class="form-check form-switch m-0">
+  <input class="form-check-input" type="checkbox" role="switch" aria-label="Ramesh Kumar available" checked></div>
+</td><td><span class="status status-available">Available</span></td>
+<td><div class="row-actions">
+  <button class="icon-btn" type="button" data-action="view" aria-label="View Ramesh Kumar">
+    <i class="bi bi-eye" aria-hidden="true"></i></button>
+    <button class="icon-btn" type="button" data-action="edit" aria-label="Edit Ramesh Kumar">
+      <i class="bi bi-pencil" aria-hidden="true"></i></button>
+    </div></td></tr><tr data-id="Suresh Babu" data-status="on-trip"><td><div class="cell-user">
+      <img src="../assets/images/driver2.jpg" alt="Photo of Suresh Babu" width="48" height="48" loading="lazy" decoding="async"><span><strong>Suresh Babu</strong><small>DRV-1041</small></span></div></td>
+<td dir="ltr">+91 98410 21137</td><td><code>TN232019000141</code></td>
+<td>E-Class · TN 09 KV 1180</td><td><span class="v-rating">
+  <i class="bi bi-star-fill" aria-hidden="true"></i>4.8</span></td><td class="num">2,940</td>
+<td><div class="form-check form-switch m-0">
+  <input class="form-check-input" type="checkbox" role="switch" aria-label="Suresh Babu available" checked></div></td><td><span class="status status-on-trip">On Trip</span></td>
+<td><div class="row-actions">
+  <button class="icon-btn" type="button" data-action="view" aria-label="View Suresh Babu"><i class="bi bi-eye" aria-hidden="true"></i></button><button class="icon-btn" type="button" data-action="edit" aria-label="Edit Suresh Babu"><i class="bi bi-pencil" aria-hidden="true"></i></button></div></td></tr><tr data-id="Imran Khan" data-status="available"><td><div class="cell-user">
+    <img src="../assets/images/driver3.jpg" alt="Photo of Imran Khan" width="48" height="48" loading="lazy" decoding="async"><span><strong>Imran Khan</strong><small>DRV-1042</small></span></div></td>
+<td dir="ltr">+91 98420 21274</td><td><code>TN242019000242</code></td>
+<td>V-Class · TS 07 KV 5512</td><td><span class="v-rating"><i class="bi bi-star-fill" aria-hidden="true">
+
+</i>4.9</span></td><td class="num">2,210</td>
+<td><div class="form-check form-switch m-0"><input class="form-check-input" type="checkbox" role="switch" aria-label="Imran Khan available" checked></div></td><td><span class="status status-available">Available</span></td>
+<td><div class="row-actions"><button class="icon-btn" type="button" data-action="view" aria-label="View Imran Khan">
+  <i class="bi bi-eye" aria-hidden="true"></i></button>
+  <button class="icon-btn" type="button" data-action="edit" aria-label="Edit Imran Khan">
+    <i class="bi bi-pencil" aria-hidden="true"></i></button>
+  </div></td></tr><tr data-id="Joseph D'Souza" data-status="offline"><td>
+    <div class="cell-user"><img src="../assets/images/driver4.jpg" alt="Photo of Joseph D&#x27;Souza" width="48" height="48" loading="lazy" decoding="async"><span><strong>Joseph D'Souza</strong><small>DRV-1043</small></span></div></td>
+<td dir="ltr">+91 98430 21411</td><td><code>TN252019000343</code>
+</td><td>Fortuner · KA 03 KV 6610</td><td><span class="v-rating">
+  <i class="bi bi-star-fill" aria-hidden="true"></i>4.7</span></td><td class="num">1,760</td>
+<td><div class="form-check form-switch m-0">
+  <input class="form-check-input" type="checkbox" role="switch" aria-label="Joseph D'Souza available">
+</div></td><td><span class="status status-offline">Offline</span></td>
+<td><div class="row-actions">
+  <button class="icon-btn" type="button" data-action="view" aria-label="View Joseph D'Souza">
+    <i class="bi bi-eye" aria-hidden="true"></i></button>
+    <button class="icon-btn" type="button" data-action="edit" aria-label="Edit Joseph D'Souza">
+      <i class="bi bi-pencil" aria-hidden="true"></i>
+    </button></div></td>
+  </tr><tr data-id="Gurpreet Singh" data-status="on-trip"><td><div class="cell-user">
+    <img src="../assets/images/driver5.jpg" alt="Photo of Gurpreet Singh" width="48" height="48" loading="lazy" decoding="async"><span><strong>Gurpreet Singh</strong><small>DRV-1044</small></span></div></td>
+<td dir="ltr">+91 98440 21548</td><td><code>TN262019000444</code>
+</td><td>BMW 5 · MH 02 KV 4471</td><td><span class="v-rating">
+  <i class="bi bi-star-fill" aria-hidden="true"></i>4.8</span></td><td class="num">2,488</td>
+<td><div class="form-check form-switch m-0">
+  <input class="form-check-input" type="checkbox" role="switch" aria-label="Gurpreet Singh available" checked></div></td><td>
+    <span class="status status-on-trip">On Trip</span></td>
+<td><div class="row-actions">
+  <button class="icon-btn" type="button" data-action="view" aria-label="View Gurpreet Singh">
+    <i class="bi bi-eye" aria-hidden="true"></i></button>
+    <button class="icon-btn" type="button" data-action="edit" aria-label="Edit Gurpreet Singh"><i class="bi bi-pencil" aria-hidden="true"></i></button>
+  </div></td></tr><tr data-id="Lakshmi Devi" data-status="suspended"><td>
+    <div class="cell-user"><img src="../assets/images/driver6.jpg" alt="Photo of Lakshmi Devi" width="48" height="48" loading="lazy" decoding="async"><span><strong>Lakshmi Devi</strong><small>DRV-1045</small></span></div></td>
+<td dir="ltr">+91 98450 21685</td><td><code>TN272019000545</code></td><td>Unassigned</td><td><span class="v-rating"><i class="bi bi-star-fill" aria-hidden="true"></i>4.1</span></td><td class="num">640</td>
+<td><div class="form-check form-switch m-0"><input class="form-check-input" type="checkbox" role="switch" aria-label="Lakshmi Devi available" disabled></div></td><td><span class="status status-suspended">Suspended</span></td>
+<td><div class="row-actions"><button class="icon-btn" type="button" data-action="view" aria-label="View Lakshmi Devi"><i class="bi bi-eye" aria-hidden="true"></i></button><button class="icon-btn" type="button" data-action="edit" aria-label="Edit Lakshmi Devi"><i class="bi bi-pencil" aria-hidden="true"></i></button></div></td></tr></tbody></table></div>
+  <div class="table-foot"><span>Showing 1–6 of 3,412</span>
+  <nav aria-label="Driver pages"><div class="k-pagination">
+    <a href="#" aria-label="Previous page"><i class="bi bi-chevron-left" aria-hidden="true"></i></a>
+    <a href="#" aria-current="page">1</a><a href="#">2</a><a href="#">3</a><span aria-hidden="true">…</span><a href="#">161</a>
+    <a href="#" aria-label="Next page"><i class="bi bi-chevron-right" aria-hidden="true"></i></a>
+  </div></nav></div>
+</div>
+    </main>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
+<script src="../assets/js/dashboard.js" defer></script>
+</body>
+</html>

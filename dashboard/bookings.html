@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bookings — Kaarvan Admin</title>
+<meta name="description" content="Manage bookings: filter, assign drivers, cancel and download invoices.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://www.kaarvan.example/dashboard/bookings.html">
+<meta name="theme-color" content="#15171A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Crect width='34' height='34' rx='8' fill='%2315171A'/%3E%3Cpath d='M10 24 L17 9 L24 24' fill='none' stroke='%23D4A24C' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kaarvan">
+<meta property="og:title" content="Bookings — Kaarvan Admin">
+<meta property="og:description" content="Manage bookings: filter, assign drivers, cancel and download invoices.">
+<meta property="og:url" content="https://www.kaarvan.example/dashboard/bookings.html">
+<meta property="og:image" content="https://www.kaarvan.example/assets/images/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_IN">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bookings — Kaarvan Admin">
+<meta name="twitter:description" content="Manage bookings: filter, assign drivers, cancel and download invoices.">
+<meta name="twitter:image" content="https://www.kaarvan.example/assets/images/og-cover.jpg">
+
+<script>
+  /* Apply saved theme + language before first paint (no flash) */
+  (function () {
+    try {
+      var t = localStorage.getItem('mobility-theme');
+      if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-bs-theme', t);
+      var l = localStorage.getItem('mobility-lang');
+      if (l) { document.documentElement.lang = l; document.documentElement.dir = (l === 'ar' || l === 'he') ? 'rtl' : 'ltr'; }
+      var d = localStorage.getItem('mobility-dir');
+      if (d === 'rtl' || d === 'ltr') document.documentElement.dir = d;
+    } catch (e) {}
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/dark-mode.css">
+<link rel="stylesheet" href="../assets/css/rtl.css">
+
+
+</head>
+<body>
+<div id="preloader" class="preloader" role="status" aria-live="polite">
+  <span class="preloader-mark" aria-hidden="true">
+    <svg viewBox="0 0 44 44"><circle class="preloader-ring" cx="22" cy="22" r="19"></circle></svg>
+  </span>
+  <span class="preloader-word">Kaarvan</span>
+  <span class="visually-hidden">Loading…</span>
+</div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="app-shell">
+  <aside class="app-side" id="appSide" aria-label="Dashboard navigation">
+    <a class="brand" href="../pages/index.html" aria-label="Kaarvan home"><img class="brand-logo" src="../assets/images/logo-light.png" alt="Kaarvan" width="364" height="120"></a>
+    <div class="side-label">Dashboard</div>
+<ul class="side-nav"><li><a href="index.html"><i class="bi bi-grid-1x2" aria-hidden="true"></i>Overview</a></li><li><a href="bookings.html" class="active" aria-current="page"><i class="bi bi-journal-text" aria-hidden="true"></i>Bookings<span class="count">12</span></a></li><li><a href="bookings.html#rentals"><i class="bi bi-key" aria-hidden="true"></i>Rentals</a></li><li><a href="vehicles.html"><i class="bi bi-car-front" aria-hidden="true"></i>Vehicles</a></li><li><a href="customers.html"><i class="bi bi-people" aria-hidden="true"></i>Customers</a></li><li><a href="drivers.html"><i class="bi bi-person-badge" aria-hidden="true"></i>Drivers</a></li><li><a href="vehicles.html#locations"><i class="bi bi-geo-alt" aria-hidden="true"></i>Locations</a></li></ul>
+<div class="side-label">Finance &amp; comms</div>
+<ul class="side-nav"><li><a href="payments.html"><i class="bi bi-credit-card" aria-hidden="true"></i>Payments</a></li><li><a href="messages.html"><i class="bi bi-chat-dots" aria-hidden="true"></i>Messages<span class="count">4</span></a></li><li><a href="customers.html#reviews"><i class="bi bi-star" aria-hidden="true"></i>Reviews</a></li><li><a href="settings.html#booking"><i class="bi bi-ticket-perforated" aria-hidden="true"></i>Coupons</a></li></ul>
+<div class="side-label">Insights</div>
+<ul class="side-nav"><li><a href="reports.html"><i class="bi bi-bar-chart-line" aria-hidden="true"></i>Reports</a></li><li><a href="settings.html#notifications"><i class="bi bi-bell" aria-hidden="true"></i>Notifications</a></li><li><a href="settings.html"><i class="bi bi-gear" aria-hidden="true"></i>Settings</a></li></ul>
+    <div class="side-foot"><div class="side-card"><strong>Fleet health</strong>94% of vehicles on the road today.<div class="progress-line mt-2"><span class="amber" style="width:94%"></span></div></div></div>
+  </aside>
+  <div class="app-overlay" aria-hidden="true"></div>
+  <div class="app-main">
+    <header class="app-top">
+      <button class="icon-btn side-toggle" type="button" aria-controls="appSide" aria-expanded="false" aria-label="Open navigation"><i class="bi bi-layout-sidebar" aria-hidden="true"></i></button>
+      <form class="search d-none d-md-block" role="search" onsubmit="return false">
+        <i class="bi bi-search" aria-hidden="true"></i>
+        <label class="visually-hidden" for="topSearch">Search</label>
+        <input class="form-control" id="topSearch" type="search" placeholder="Search bookings, customers, vehicles…">
+      </form>
+      <div class="tools">
+        <div class="dropdown">
+  <button class="icon-btn lang-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Change language">
+    <i class="bi bi-globe2" aria-hidden="true"></i><span data-lang-current>EN</span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end"><li><a class="dropdown-item" href="#" data-lang="en" lang="en">English</a></li><li><a class="dropdown-item" href="#" data-lang="hi" lang="hi">हिन्दी</a></li><li><a class="dropdown-item" href="#" data-lang="ta" lang="ta">தமிழ்</a></li><li><a class="dropdown-item" href="#" data-lang="ar" lang="ar">العربية (RTL)</a></li><li><a class="dropdown-item" href="#" data-lang="he" lang="he">עברית (RTL)</a></li></ul>
+</div>
+        <button class="icon-btn theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme">
+  <i class="bi bi-moon-stars" aria-hidden="true"></i><i class="bi bi-sun" aria-hidden="true"></i>
+</button>
+        <div class="dropdown">
+          <button class="icon-btn dot-badge" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Notifications, 3 unread"><i class="bi bi-bell" aria-hidden="true"></i></button>
+          <div class="dropdown-menu dropdown-menu-end p-0" style="width:320px">
+            <div class="p-3 border-bottom d-flex justify-content-between"><strong>Notifications</strong><a href="#" class="small">Mark all read</a></div>
+            <div class="list-rows p-3">
+              <div><i class="bi bi-calendar-plus fs-5" aria-hidden="true"></i><div class="lr-main"><strong>New booking KV-204918</strong><small>Airport transfer · 2 min ago</small></div></div>
+              <div><i class="bi bi-exclamation-triangle fs-5" aria-hidden="true"></i><div class="lr-main"><strong>Service due: TN 09 KV 2210</strong><small>Innova Hycross · 1 h ago</small></div></div>
+              <div><i class="bi bi-credit-card fs-5" aria-hidden="true"></i><div class="lr-main"><strong>Refund processed ₹1,840</strong><small>TXN-88213 · 3 h ago</small></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="d-flex align-items-center gap-2 border-0 bg-transparent p-0" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account menu for Priya Raman" style="min-height:44px">
+            <img class="avatar" src="../assets/images/customer10.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">
+            <span class="d-none d-lg-block text-start lh-sm"><strong class="d-block small">Priya Raman</strong><small class="text-muted">Operations Admin</small></span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#"><i class="bi bi-person me-2" aria-hidden="true"></i>Profile</a></li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-gear me-2" aria-hidden="true"></i>Settings</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="../pages/login.html"><i class="bi bi-box-arrow-right me-2" aria-hidden="true"></i>Log out</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main id="main" class="app-content" tabindex="-1">
+
+<div class="page-bar"><div><h1>Bookings</h1><p class="text-muted mb-0">All taxi, rental, hourly and corporate bookings.</p></div>
+  <div class="d-flex gap-2"><button class="btn btn-line" type="button" data-toast="Export started — CSV will download shortly"><i class="bi bi-download me-2" aria-hidden="true"></i>Export</button><button class="btn btn-ink" type="button" data-toast="Open the booking form (connect to your API)"><i class="bi bi-plus-lg me-2" aria-hidden="true"></i>New booking</button></div></div>
+<div class="panel flush" id="rentals">
+  <form class="filter-bar p-3 border-bottom" data-table-filter="#bookTable" data-filter-count="#bookCount" aria-label="Filter bookings" onsubmit="return false">
+    <label class="visually-hidden" for="bf-q">Search</label><input class="form-control" id="bf-q" type="search" data-col="q" placeholder="Search ID, customer, place…" style="min-width:220px">
+    <label class="visually-hidden" for="bf-date">Date</label><input class="form-control" id="bf-date" type="date">
+    <label class="visually-hidden" for="bf-svc">Service</label><select class="form-select" id="bf-svc" data-col="service"><option value="all">All services</option><option value="taxi">Taxi</option><option value="airport">Airport</option><option value="rental">Rental</option><option value="hourly">Hourly</option><option value="outstation">Outstation</option><option value="corporate">Corporate</option></select>
+    <label class="visually-hidden" for="bf-st">Status</label><select class="form-select" id="bf-st" data-col="status"><option value="all">All statuses</option><option value="confirmed">Confirmed</option><option value="pending">Pending</option><option value="completed">Completed</option><option value="cancelled">Cancelled</option></select>
+    <label class="visually-hidden" for="bf-veh">Vehicle</label><select class="form-select" id="bf-veh"><option>All vehicles</option><option>Sedan</option><option>SUV</option><option>Luxury</option><option>Van</option><option>Electric</option></select>
+    <label class="visually-hidden" for="bf-drv">Driver</label><select class="form-select" id="bf-drv"><option>All drivers</option><option>Ramesh Kumar</option><option>Suresh Babu</option><option>Imran Khan</option><option>Joseph D'Souza</option><option>Gurpreet Singh</option><option>Lakshmi Devi</option></select>
+    <button class="btn btn-line" type="reset">Clear</button>
+    <span class="ms-auto small text-muted" aria-live="polite"><strong id="bookCount">8</strong> shown</span>
+  </form>
+  <div id="bulkBar" class="p-3 border-bottom d-flex gap-2 align-items-center" hidden><strong><span data-selected-count>0</span> selected</strong><button class="btn btn-line btn-sm" type="button" data-toast="Drivers assigned">Assign driver</button><button class="btn btn-line btn-sm" type="button" data-toast="Invoices queued">Download invoices</button></div>
+  <div class="table-wrap"><table class="k-table" id="bookTable"><caption class="visually-hidden">Bookings</caption>
+    <thead><tr><th scope="col"><input class="form-check-input" type="checkbox" data-select-all="#bulkBar" aria-label="Select all bookings"></th><th scope="col">Booking ID</th><th scope="col">Customer</th><th scope="col">Service</th><th scope="col">Vehicle</th><th scope="col">Driver</th><th scope="col">Pickup</th><th scope="col">Destination</th><th scope="col">Date</th><th scope="col" class="num">Amount</th><th scope="col">Status</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead>
+    <tbody><tr data-id="KV-204918" data-status="confirmed" data-service="airport"><td><input class="form-check-input" type="checkbox" aria-label="Select KV-204918"></td>
+<td><strong>KV-204918</strong></td><td><div class="cell-user"><img src="../assets/images/customer2.jpg" alt="" width="48" height="48" loading="lazy" decoding="async"><span>Ananya Iyer<small>ananya@example.com</small></span></div></td><td>Airport</td><td>Camry Hybrid</td><td><div class="cell-user"><img src="../assets/images/driver1.jpg" alt="" width="48" height="48" loading="lazy" decoding="async"><span>Ramesh Kumar</span></div></td><td>Chennai Airport T1</td><td>R.A. Puram</td><td>28 Sep</td><td class="num">₹1,099</td><td><span class="status status-confirmed">Confirmed</span></td>
+<td><div class="dropdown"><button class="icon-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Actions for KV-204918"><i class="bi bi-three-dots" aria-hidden="true"></i></button>
+<ul class="dropdown-menu dropdown-menu-end"><li><button class="dropdown-item" type="button" data-action="view"><i class="bi bi-eye me-2" aria-hidden="true"></i>View</button></li><li><button class="dropdown-item" type="button" data-action="edit"><i class="bi bi-pencil me-2" aria-hidden="true"></i>Edit</button></li>
+<li><button class="dropdown-item" type="button" data-action="assign" data-bs-toggle="modal" data-bs-target="#assignModal"><i class="bi bi-person-check me-2" aria-hidden="true"></i>Assign Driver</button></li><li><button class="dropdown-item" type="button" data-action="invoice"><i class="bi bi-download me-2" aria-hidden="true"></i>Download Invoice</button></li>
+<li><hr class="dropdown-divider"></li><li><button class="dropdown-item text-danger" type="button" data-action="cancel"><i class="bi bi-x-circle me-2" aria-hidden="true"></i>Cancel</button></li></ul></div></td></tr><tr data-id="KV-204917" data-status="pending" data-service="corporate"><td><input class="form-check-input" type="checkbox" aria-label="Select KV-204917"></td>
+<td><strong>KV-204917</strong></td><td><div class="cell-user"><img src="../assets/images/customer9.jpg" alt="" width="48" height="48" loading="lazy" decoding="async"><span>Karthik S.<small>karthik@northwind.example</small></span></div></td><td>Corporate</td><td>E-Class</td><td><div class="cell-user"><img src="../assets/images/driver3.jpg" alt="" width="48" height="48" loading="lazy" decoding="async"><span>Imran Khan</span></div></td><td>Olympia Tech Park</td><td>Taj Coromandel</td><td>28 Sep</td><td class="num">₹8,999</td><td><span class="status status-pending">Pending</span></td>
+<td><div class="dropdown"><button class="icon-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Actions for KV-204917"><i class="bi bi-three-dots" aria-hidden="true"></i></button>
+<ul class="dropdown-menu dropdown-menu-end"><li><button class="dropdown-item" type="button" data-action="view"><i class="bi bi-eye me-2" aria-hidden="true"></i>View</button></li><li><button class="dropdown-item" type="button" data-action="edit"><i class="bi bi-pencil me-2" aria-hidden="true"></i>Edit</button></li>
+<li><button class="dropdown-item" type="button" data-action="assign" data-bs-toggle="modal" data-bs-target="#assignModal"><i class="bi bi-person-check me-2" aria-hidden="true"></i>Assign Driver</button></li><li><button class="dropdown-item" type="button" data-action="invoice"><i class="bi bi-download me-2" aria-hidden="true"></i>Download Invoice</button></li>
+<li><hr class="dropdown-divider"></li><li><button class="dropdown-item text-danger" type="button" data-action="cancel"><i class="bi bi-x-circle me-2" aria-hidden="true"></i>Cancel</button></li></ul></div></td></tr><tr data-id="KV-204915" data-status="confirmed" data-service="rental"><td><input class="form-check-input" type="checkbox" aria-label="Select KV-204915"></td>
+<td><strong>KV-204915</strong></td><td><div class="cell-user"><img src="../assets/images/customer1.jpg" alt="" width="48" height="48" loading="lazy" decoding="async"><span>Rohit Menon<small>rohit@example.com</small></span></div></td><td>Rental</td><td>Innova Hycross</td><td><button class="btn btn-line btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#assignModal">Assign</button></td><td>Guindy hub</td><td>Guindy hub</td><td>04 Oct</td><td class="num">₹12,597</td><td><span class="status status-confirmed">Confirmed</span></td>
+<td><div class="dropdown"><button class="icon-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Actions for KV-204915"><i class="bi bi-three-dots" aria-hidden="true"></i></button>
+<ul class="dropdown-menu dropdown-menu-end"><li><button class="dropdown-item" type="button" data-action="view"><i class="bi bi-eye me-2" aria-hidden="true"></i>View</button></li><li><button class="dropdown-item" type="button" data-action="edit"><i class="bi bi-pencil me-2" aria-hidden="true"></i>Edit</button></li>
+<li><button class="dropdown-item" type="button" data-action="assign" data-bs-toggle="modal" data-bs-target="#assignModal"><i class="bi bi-person-check me-2" aria-hidden="true"></i>Assign Driver</button></li><li><button class="dropdown-item" type="button" data-action="invoice"><i class="bi bi-download me-2" aria-hidden="true"></i>Download Invoice</button></li>
+<li><hr class="dropdown-divider"></li><li><button class="dropdown-item text-danger" type="button" data-action="cancel"><i class="bi bi-x-circle me-2" aria-hidden="true"></i>Cancel</button></li></ul></div></td></tr><tr data-id="KV-204912" data-status="completed" data-service="hourly"><td><input class="form-check-input" type="checkbox" aria-label="Select KV-204912"></td>
+<td><strong>KV-204912</strong></td><td><div class="cell-user"><img src="../assets/images/customer3.jpg" alt="" width="48" height="48" loading="lazy" decoding="async"><span>Vikram Shah<small>vikram@example.com</small></span></div></td><td>Hourly</td><td>BMW 5 Series</td><td><div class="cell-user"><img src="../assets/images/driver5.jpg" alt="" width="48" height="48" loading="lazy" decoding="async"><span>Gurpreet Singh</span></div></td><td>Bandra Kurla Complex</td><td>—</td><td>27 Sep</td><td class="num">₹4,599</td><td><span class="status status-completed">Completed</span></td>
+<td><div class="dropdown"><button class="icon-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Actions for KV-204912"><i class="bi bi-three-dots" aria-hidden="true"></i></button>
+<ul class="dropdown-menu dropdown-menu-end"><li><button class="dropdown-item" type="button" data-action="view"><i class="bi bi-eye me-2" aria-hidden="true"></i>View</button></li><li><button class="dropdown-item" type="button" data-action="edit"><i class="bi bi-pencil me-2" aria-hidden="true"></i>Edit</button></li>
+<li><button class="dropdown-item" type="button" data-action="assign" data-bs-toggle="modal" data-bs-target="#assignModal"><i class="bi bi-person-check me-2" aria-hidden="true"></i>Assign Driver</button></li><li><button class="dropdown-item" type="button" data-action="invoice"><i class="bi bi-download me-2" aria-hidden="true"></i>Download Invoice</button></li>
+<li><hr class="dropdown-divider"></li><li><button class="dropdown-item text-danger" type="button" data-action="cancel"><i class="bi bi-x-circle me-2" aria-hidden="true"></i>Cancel</button></li></ul></div></td></tr><tr data-id="KV-204909" data-status="cancelled" data-service="outstation"><td><input class="form-check-input" type="checkbox" aria-label="Select KV-204909"></td>
+<td><strong>KV-204909</strong></td><td><div class="cell-user"><img src="../assets/images/customer5.jpg" alt="" width="48" height="48" loading="lazy" decoding="async"><span>Meera Pillai<small>meera@example.com</small></span></div></td><td>Outstation</td><td>Fortuner</td><td><div class="cell-user"><img src="../assets/images/driver4.jpg" alt="" width="48" height="48" loading="lazy" decoding="async"><span>Joseph D'Souza</span></div></td><td>Kochi</td><td>Munnar</td><td>26 Sep</td><td class="num">₹9,840</td><td><span class="status status-cancelled">Cancelled</span></td>
+<td><div class="dropdown"><button class="icon-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Actions for KV-204909"><i class="bi bi-three-dots" aria-hidden="true"></i></button>
+<ul class="dropdown-menu dropdown-menu-end"><li><button class="dropdown-item" type="button" data-action="view"><i class="bi bi-eye me-2" aria-hidden="true"></i>View</button></li><li><button class="dropdown-item" type="button" data-action="edit"><i class="bi bi-pencil me-2" aria-hidden="true"></i>Edit</button></li>
+<li><button class="dropdown-item" type="button" data-action="assign" data-bs-toggle="modal" data-bs-target="#assignModal"><i class="bi bi-person-check me-2" aria-hidden="true"></i>Assign Driver</button></li><li><button class="dropdown-item" type="button" data-action="invoice"><i class="bi bi-download me-2" aria-hidden="true"></i>Download Invoice</button></li>
+<li><hr class="dropdown-divider"></li><li><button class="dropdown-item text-danger" type="button" data-action="cancel"><i class="bi bi-x-circle me-2" aria-hidden="true"></i>Cancel</button></li></ul></div></td></tr><tr data-id="KV-204906" data-status="completed" data-service="taxi"><td><input class="form-check-input" type="checkbox" aria-label="Select KV-204906"></td>
+<td><strong>KV-204906</strong></td><td><div class="cell-user"><img src="../assets/images/customer6.jpg" alt="" width="48" height="48" loading="lazy" decoding="async"><span>Arjun Rao<small>arjun@example.com</small></span></div></td><td>Taxi</td><td>Dzire</td><td><div class="cell-user"><img src="../assets/images/driver2.jpg" alt="" width="48" height="48" loading="lazy" decoding="async"><span>Suresh Babu</span></div></td><td>Koregaon Park</td><td>Hinjewadi Ph 2</td><td>26 Sep</td><td class="num">₹412</td><td><span class="status status-completed">Completed</span></td>
+<td><div class="dropdown"><button class="icon-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Actions for KV-204906"><i class="bi bi-three-dots" aria-hidden="true"></i></button>
+<ul class="dropdown-menu dropdown-menu-end"><li><button class="dropdown-item" type="button" data-action="view"><i class="bi bi-eye me-2" aria-hidden="true"></i>View</button></li><li><button class="dropdown-item" type="button" data-action="edit"><i class="bi bi-pencil me-2" aria-hidden="true"></i>Edit</button></li>
+<li><button class="dropdown-item" type="button" data-action="assign" data-bs-toggle="modal" data-bs-target="#assignModal"><i class="bi bi-person-check me-2" aria-hidden="true"></i>Assign Driver</button></li><li><button class="dropdown-item" type="button" data-action="invoice"><i class="bi bi-download me-2" aria-hidden="true"></i>Download Invoice</button></li>
+<li><hr class="dropdown-divider"></li><li><button class="dropdown-item text-danger" type="button" data-action="cancel"><i class="bi bi-x-circle me-2" aria-hidden="true"></i>Cancel</button></li></ul></div></td></tr><tr data-id="KV-204901" data-status="completed" data-service="airport"><td><input class="form-check-input" type="checkbox" aria-label="Select KV-204901"></td>
+<td><strong>KV-204901</strong></td><td><div class="cell-user"><img src="../assets/images/customer4.jpg" alt="" width="48" height="48" loading="lazy" decoding="async"><span>Sara Qureshi<small>sara@helix.example</small></span></div></td><td>Airport</td><td>V-Class</td><td><div class="cell-user"><img src="../assets/images/driver6.jpg" alt="" width="48" height="48" loading="lazy" decoding="async"><span>Lakshmi Devi</span></div></td><td>HYD Airport</td><td>HITEC City</td><td>25 Sep</td><td class="num">₹3,499</td><td><span class="status status-completed">Completed</span></td>
+<td><div class="dropdown"><button class="icon-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Actions for KV-204901"><i class="bi bi-three-dots" aria-hidden="true"></i></button>
+<ul class="dropdown-menu dropdown-menu-end"><li><button class="dropdown-item" type="button" data-action="view"><i class="bi bi-eye me-2" aria-hidden="true"></i>View</button></li><li><button class="dropdown-item" type="button" data-action="edit"><i class="bi bi-pencil me-2" aria-hidden="true"></i>Edit</button></li>
+<li><button class="dropdown-item" type="button" data-action="assign" data-bs-toggle="modal" data-bs-target="#assignModal"><i class="bi bi-person-check me-2" aria-hidden="true"></i>Assign Driver</button></li><li><button class="dropdown-item" type="button" data-action="invoice"><i class="bi bi-download me-2" aria-hidden="true"></i>Download Invoice</button></li>
+<li><hr class="dropdown-divider"></li><li><button class="dropdown-item text-danger" type="button" data-action="cancel"><i class="bi bi-x-circle me-2" aria-hidden="true"></i>Cancel</button></li></ul></div></td></tr><tr data-id="KV-204898" data-status="pending" data-service="rental"><td><input class="form-check-input" type="checkbox" aria-label="Select KV-204898"></td>
+<td><strong>KV-204898</strong></td><td><div class="cell-user"><img src="../assets/images/customer10.jpg" alt="" width="48" height="48" loading="lazy" decoding="async"><span>Divya Nair<small>divya@example.com</small></span></div></td><td>Rental</td><td>Tesla Model 3</td><td><button class="btn btn-line btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#assignModal">Assign</button></td><td>Indiranagar hub</td><td>BLR Airport</td><td>25 Sep</td><td class="num">₹17,997</td><td><span class="status status-pending">Pending</span></td>
+<td><div class="dropdown"><button class="icon-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Actions for KV-204898"><i class="bi bi-three-dots" aria-hidden="true"></i></button>
+<ul class="dropdown-menu dropdown-menu-end"><li><button class="dropdown-item" type="button" data-action="view"><i class="bi bi-eye me-2" aria-hidden="true"></i>View</button></li><li><button class="dropdown-item" type="button" data-action="edit"><i class="bi bi-pencil me-2" aria-hidden="true"></i>Edit</button></li>
+<li><button class="dropdown-item" type="button" data-action="assign" data-bs-toggle="modal" data-bs-target="#assignModal"><i class="bi bi-person-check me-2" aria-hidden="true"></i>Assign Driver</button></li><li><button class="dropdown-item" type="button" data-action="invoice"><i class="bi bi-download me-2" aria-hidden="true"></i>Download Invoice</button></li>
+<li><hr class="dropdown-divider"></li><li><button class="dropdown-item text-danger" type="button" data-action="cancel"><i class="bi bi-x-circle me-2" aria-hidden="true"></i>Cancel</button></li></ul></div></td></tr></tbody></table></div>
+  <div class="table-foot"><span>Showing 1–8 of 1,284</span>
+  <nav aria-label="Table pages"><div class="k-pagination">
+    <a href="#" aria-label="Previous page"><i class="bi bi-chevron-left" aria-hidden="true"></i></a>
+    <a href="#" aria-current="page">1</a><a href="#">2</a><a href="#">3</a><span aria-hidden="true">…</span><a href="#">161</a>
+    <a href="#" aria-label="Next page"><i class="bi bi-chevron-right" aria-hidden="true"></i></a>
+  </div></nav></div>
+</div>
+<div class="modal fade" id="assignModal" tabindex="-1" aria-labelledby="assignTitle" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><form class="modal-content" onsubmit="event.preventDefault();bootstrap.Modal.getInstance(this.closest('.modal')).hide();KaarvanToast('Driver assigned and notified by SMS')">
+  <div class="modal-header"><h2 class="modal-title h5" id="assignTitle">Assign driver</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+  <div class="modal-body"><label class="form-label" for="as-drv">Available drivers nearby</label><select class="form-select" id="as-drv"><option>Ramesh Kumar</option><option>Suresh Babu</option><option>Imran Khan</option><option>Joseph D'Souza</option><option>Gurpreet Singh</option><option>Lakshmi Devi</option></select>
+    <div class="k-alert info mt-3"><i class="bi bi-geo" aria-hidden="true"></i><div>Suggested: Ramesh Kumar, 2.1 km away, ★ 4.9</div></div></div>
+  <div class="modal-footer"><button type="button" class="btn btn-line" data-bs-dismiss="modal">Cancel</button><button class="btn btn-ink" type="submit">Assign</button></div>
+</form></div></div>
+    </main>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
+<script src="../assets/js/dashboard.js" defer></script>
+</body>
+</html>

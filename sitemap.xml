@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.kaarvan.example/pages/index.html</loc><lastmod>2026-09-24</lastmod><priority>1.0</priority></url>
+  <url><loc>https://www.kaarvan.example/pages/home-2.html</loc><lastmod>2026-09-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.kaarvan.example/pages/about.html</loc><lastmod>2026-09-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.kaarvan.example/pages/services.html</loc><lastmod>2026-09-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.kaarvan.example/pages/service-details.html</loc><lastmod>2026-09-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.kaarvan.example/pages/fleet.html</loc><lastmod>2026-09-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.kaarvan.example/pages/vehicle-details.html</loc><lastmod>2026-09-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.kaarvan.example/pages/booking.html</loc><lastmod>2026-09-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.kaarvan.example/pages/pricing.html</loc><lastmod>2026-09-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.kaarvan.example/pages/locations.html</loc><lastmod>2026-09-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.kaarvan.example/pages/contact.html</loc><lastmod>2026-09-24</lastmod><priority>0.8</priority></url>
+</urlset>
